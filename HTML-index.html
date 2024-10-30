@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Présentation</title>
+    <!-- Inclusion des feuilles de style -->
+    <link rel="stylesheet" href="CSS-style.css">
+	<link rel="stylesheet" href="CSS-style-homepage.css">
+	<link rel="stylesheet" href="CSS-style-homepage-media.css">
+	
+	<link rel="stylesheet" href="https://use.typekit.net/lth6obh.css">
+</head>
+
+<body>
+    <!-- En-tête avec logo et navigation principale -->
+    <header>
+        <div class="logo">
+            <img src="IMAGES/Logo/110827_moon_icon.png" alt="Logo" style="height: 50px;">
+        </div>
+	
+		<!-- Navigation de l'entête -->
+        <nav class="main-navigation">
+            <a href="#presentation" class="nav-link">Présentation</a>
+            <a href="#aproposdemoi" class="nav-link">À propos de moi</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#contact" class="nav-link">Contact</a>
+			<a href="HTML-blog.html" class="nav-link">Blog</a>
+        </nav>
+		
+		<!-- Points de navigation pour un défilement fluide entre les sections -->
+        <nav class="scroll-nav">
+            <button onclick="location.href='#presentation'"></button>
+            <button onclick="location.href='#aproposdemoi'"></button>
+			<button onclick="location.href='#aproposvideo'"></button>
+            <button onclick="location.href='#portfolio'"></button>
+            <button onclick="location.href='#contact'"></button>
+        </nav>
+    </header>
+
+	<!-- SECTION PRÉSENTATION -->
+	<section id="presentation" class="sectionsplit section">
+    
+		<!-- Titre et texte de présentation -->
+		<div class="presentation">
+			<h1 class="Webdev">Web Développeuse <br> En formation <span>&#9632</span></h1>
+			<div class="item-group" xyz="fade front-3 flip-down-50% duration-10 stagger-5">
+				<div class="square xyz-out"></div>
+				<div class="square xyz-out"></div>
+				<div class="square xyz-out"></div>
+			</div>
+  
+    		<div class="bloctext">
+        		<div class="textpresentation">
+            		<p>Passionnée par l'informatique et les nouvelles technologies, je me reconvertis dans le développement web.</p>
+            		<p>Venez suivre mon évolution et mon apprentissage avec ce site qui est aussi mon portfolio !</p>
+        		</div>
+        
+        		<div class="blocpresentation">
+            		<div class="bloc">
+						<p><strong>FRONT END </strong> : HTML, CSS</p>
+            		</div>
+            		<div class="bloc">
+                		<p><strong>BACK END</strong>: En cours...</p>
+            		</div>
+        		</div>
+    		</div>
+		</div>
+		
+		<!-- Photo de profil avec décoration -->
+        <div class="profil-picture">
+            <img src="IMAGES/HomePage/Profil.png" alt="Profil" class="profil">
+			<div class="decoprofil">
+				<img src="IMAGES/HomePage/Décorations/deco profil.png" alt="decoration profil">
+			</div>
+			<div class="decoprofilcercle">
+				<img src="IMAGES/HomePage/Décorations/cercle blanc.png" alt="decoration cercle blanc">
+			</div>
+		</div>
+    </section>
+
+	<!-- SECTION À PROPOS DE MOI -->
+	<section id="aproposdemoi" class="section sectionparcours">
+    	<div class="apropos">
+        	<h2 class="parcours">Mon Parcours</h2>
+        		<div class="Bienvenue"> 
+            	<p>Bienvenue sur mon site vitrine !  (~_^)</p>
+					<p>Après un parcours riche, débutant par une licence en arts plastiques, suivi d’un master en arts numériques, puis diverses expériences professionnelles, j’ai découvert une véritable passion pour le codage. Mon aventure dans le métier d’assistante dentaire m’a confirmé que ce que j'aime vraiment, c’est être derrière un écran, résoudre des problèmes et créer des choses nouvelles. </p> 
+					<p>C’est pourquoi je souhaite aujourd’hui me reconvertir en tant que développeuse web. J’apprends en autodidacte depuis peu et je suis activement à la recherche d’une formation pour approfondir mes compétences.</p>
+					<p>Pour suivre en détail l'évolution de ce site et découvrir les étapes de mon apprentissage, je vous invite à visiter <strong class="blog"><a href="HTML-blog.html">mon blog/journal de progression</a></strong>.</p>
+        		</div>
+    	</div>
+		<!-- Image illustrant la section -->
+    	<div class="image-presentation">
+        	<img src="IMAGES/HomePage/illustration-pc-inversion2.png" alt="Illustratrice" class="image">
+    	</div>
+	</section>
+
+	<!-- SOUS-SECTION VIDÉO -->
+	<section id="aproposvideo" class="section sectionparcousvideo">
+    	<div class="video-presentation">
+        	<h2 controls class="presentationvideo" width="740" height="400">Présentation Vidéo</h2>
+        	<iframe class="video" src="https://drive.google.com/file/d/1QidEAao2LhXaSl0ckzEX_WbIfWr7Z1UW/preview"
+                allow="autoplay; encrypted-media" 
+                frameborder="0" 
+                allowfullscreen>
+        	</iframe>
+		</div>
+		<!-- Décorations pour la vidéo -->
+		<div class="decovideo">
+			<div class="decovideo1"> 
+				<img src="IMAGES/HomePage/Décorations/deco.png" alt="carré petits points"> 
+			</div>
+			<div class="decovideo2"> 
+				<p><img src="IMAGES/HomePage/Décorations/deco2.png" alt="carré petits points"></p>
+			</div>
+			<div class="decovideo3">
+				<img src="IMAGES/HomePage/Décorations/carrécarré.png" alt="carré petits points">
+			</div>
+		</div>	
+	</section>
+
+	<!-- SECTION PORTFOLIO -->
+	<section id="portfolio" class="section portfolio-section">
+    	<h2>Portfolio</h2>
+    	<div class="portfolio-gallery">
+        	<div class="portfolio-item"> 
+				<a href="HTML-underconstruction.html">Illustrator</a>
+			</div>
+        	<div class="portfolio-item">
+				<a href="HTML-underconstruction.html">Figma</a>
+			</div>
+        	<div class="portfolio-item">
+				<a href="HTML-underconstruction.html">Ma progression</a>
+			</div>
+        	<div class="portfolio-item">
+				<a href="https://github.com/Moonyelit">Github</a>
+			</div>
+    	</div>
+	</section>
+
+	<!-- SECTION CONTACT -->
+	<section id="contact" class="section contact-section">
+        <h2 class="contact">Contact</h2>
+        <form action="Ancien/submit_form" method="post">
+			<div class="alignement">
+            	<input type="text" name="name" placeholder="Votre Nom" required>
+            	<input type="email" name="email" placeholder="Votre Email" required>
+			</div>
+            <textarea name="message" placeholder="Votre Message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+		
+		<!-- Image d'une section en travaux -->
+		<div class="underconstruction">
+			<img src="IMAGES/Travaux/underconstruction.png" alt="underconstruction">
+		</div>
+    </section>
+
+	<!-- PIED DE PAGE -->
+    <footer id="footer" class="footer">
+		<div class="piedpage">
+			<div class="footer-main">
+				<span class="sayhello">SAY HELLO</span>
+				<ul>
+					<li class="pied">hello.devfougerouse@gmail.com</li>
+				</ul>
+			</div>
+		
+			<ul class="footer-site-nav">
+				<li><a href="">Accueil</a></li>
+			</ul>
+		</div>
+		
+		<hr class="ligne">
+
+		<!-- Section des réseaux sociaux -->
+		<div class="footer-bottom">
+			<span class="copyright">© FOUGEROUSE Élodie 2024</span>
+			<div class="footer-social">
+	  		 	<a href="HTML-index.html" class="logo-icon">
+            		<img src="IMAGES/Logo/110827_moon_icon.png" alt="Moon Logo" class="lien-icone2"/>
+        		</a>
+            	<a target="_blank" href="https://x.com/ElodieFougerou2" class="lien-icone">
+                	<img src="IMAGES/Logo/icons8-twitter-48.png" alt="Logo Twitter/X" class="lien-icone"/>
+            	</a>
+            	<a target="_blank" href="https://www.linkedin.com/in/elodie-fougerouse-034772210/" class="lien-icone">
+                	<img src="IMAGES/Logo/icons8-linkedin-50.png" alt="Logo Linkdin" class="lien-icone"/>
+            	</a>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- Inclusion du fichier JavaScript -->
+	<script src="JS-index.js"></script>
+</body>
+</html>

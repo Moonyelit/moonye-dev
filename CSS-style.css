@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+/* STYLE GENERAL */
+/* Style général pour la page, réglage des marges, police, et comportement du scroll */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: white;
+    color: #0f1930;
+}
+
+a:hover {
+  text-decoration: underline; /* Souligner les liens au survol */
+}
+
+.section {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECTION EN-TÊTE */
+/* Styles pour l'en-tête (header), position fixe et responsive */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4); /* Ombre sous l'en-tête */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Navigation principale dans l'en-tête */
+.main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+}
+
+/* Lien de la navigation (nav-link) */
+.nav-link {
+    text-decoration: none;
+    color: #0f1930;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: bold;
+    font-family: "cooper-black-std", serif;
+}
+
+/* Marge supplémentaire pour les liens */
+nav a {
+    margin-left: 30px; 
+}
+
+/* Transition pour les liens de navigation */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+/* Effet au survol des liens de navigation */
+.nav-link:hover {
+    color: #dda55e;
+}
+
+/* SECTION PIED DE PAGE */
+/* Style pour le pied de page (footer) */
+footer {
+    margin-top: 70px;
+    padding: 50px 150px;
+    background: #DDA55E; /* Couleur de fond du pied de page */
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alignement des icônes sociales */
+}
+
+/* Style du texte dans le pied de page */
+.sayhello {
+    font-size: 1em;
+    font-family: "cooper-black-std", serif;
+    color: white;
+}
+
+/* Ligne de séparation dans le pied de page */
+.ligne {
+    width: 100%;
+    height: 2px;
+    background-color: #0f1930;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Icônes sociales dans le pied de page */
+.footer-social {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+}
+
+/* Style des icônes de liens dans le pied de page */
+.lien-icone {
+    margin-left: 30px;
+    height: 50px;
+}
+.lien-icone2 {
+    height: 80px;
+}
+
+/* Effet au survol des icônes sociales */
+.lien-icone:hover {
+    opacity: 0.5; /* Réduction de l'opacité au survol */
+}
+
+/* STYLES POUR LES PETITS ÉCRANS */
+/* Styles pour les appareils portables (écrans < 600px) */
+@media only screen and (max-width: 600px) {  
+    /* Adaptation des marges des liens de navigation */
+    .nav-link {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    
+    /* Masquer la navigation par boutons en version mobile */
+    .scroll-nav button {
+        display: none;
+    }
+
+    /* Ajustement du pied de page pour les petits écrans */
+    footer {
+        padding: 50px 20px; 
+    }
+
+    /* Ajustement des icônes dans le pied de page pour les petits écrans */
+    .lien-icone {
+        margin-left: 15px;
+        height: 50px;
+    }
+    .lien-icone2 {
+        height: 80px;
+    }
+
+    /* Effet au survol des icônes sociales */
+    .lien-icone:hover {
+        opacity: 0.5;
+    }
+}

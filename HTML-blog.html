@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog de mon évolution</title>
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="CSS-style.css">
+    <link rel="stylesheet" href="CSS-style-blog.css">
+    <link rel="stylesheet" href="CSS-blog-media.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lth6obh.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMAGES/Logo/110827_moon_icon.png" alt="Logo" style="height: 50px;">
+        </div>
+    
+        <!-- Navigation entête -->
+        <nav class="main-navigation">
+            <a href="index.html#presentation" class="nav-link">Présentation</a>
+            <a href="#index.htmlaproposdemoi" class="nav-link">À propos de moi</a>
+            <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+			<a href="HTML-blog.html" class="nav-link">Blog</a>
+        </nav>
+    </header>
+
+    <!-- Barres de progression des compétences -->
+    <section id="evolution-skillbar">
+        <h1>Mon Évolution dans le Codage</h1>
+        <div class="skills">
+            <h2>Mes compétences</h2>
+            <!-- Barre de compétence HTML -->
+            <div class="skill-bar">
+                <p>HTML</p>
+                <div class="progress">
+                    <div class="skills html">75%</div>
+                </div>
+            </div>
+            <!-- Barre de compétence CSS -->
+            <div class="skill-bar">
+                <p>CSS</p>
+                <div class="progress">
+                    <div class="skills css">50%</div>
+                </div>
+            </div>
+            <!-- Barre de compétence JavaScript -->
+            <div class="skill-bar">
+                <p>JavaScript</p>
+                <div class="progress">
+                    <div class="skills js">15%</div>
+                </div>
+            </div>
+            <!-- Barre de compétence PHP -->
+            <div class="skill-bar">
+                <p>PHP</p>
+                <div class="progress">
+                    <div class="skills php">0%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chronologie de l'évolution -->
+    <section class="timeline">
+        <h2>Mon Parcours</h2>
+        <div class="timeline-container">
+            
+            <!------------ Août 2024 ------------>
+            <div class="moisligne">
+                <div class="timeline-point left" data-id="aout">
+                    <span class="timeline-dot timeline-dot-aout2024" onclick="toggleDetails('aout-details')"></span> 
+
+                    <!-- Titre de la date -->
+                    <div class="date" onclick="toggleDetails('aout-details')">    
+                        <span>Août 2024</span>
+                    </div>
+
+                    <!-- Section détails -->
+                    <div id="aout-details" class="details">
+                        <div class="details-content">
+
+                            <!-- Section gauche : Contenu textuel -->
+                            <div class="text-container">
+                                <h3>Début apprentissage autodidacte</h3>
+                                <p>Au début, je me sentais un peu perdue. Je ne savais pas par où commencer ni sur quoi me concentrer. J’ai cherché des formations pour être guidée, mais avec les vacances d’été, il n’y avait pas vraiment d’options disponibles à court terme. Finalement, je me suis tournée vers les cours proposés par OpenClassrooms, en me disant que connaître les bases serait une bonne idée en attendant. J’ai donc commencé par apprendre le HTML, et divers cours.</p>
+                                <p>Le tout en prenant beaucoup de notes pour bien assimiler les concepts.</p>
+                            </div>
+
+                            <!-- Section droite : Diaporama d'images -->
+                            <div class="image-container">
+                                <div class="image-diapo">
+                                    <div class="arrow left" onclick="prevImage()">&#10094;</div>
+                                    <!-- Diapositive d'images avec texte de superposition -->
+                                    <img src="IMAGES/Blog/2024-08/Comprendre-web.png" alt="Comprendre le web" class="active-image" data-overlay="Comprendre le web">
+                                    <img src="IMAGES/Blog/2024-08/Découvrir-métiers.png" alt="Les métiers du Web" class="hidden-image" data-overlay="Découvrir les métiers du Web">
+                                    <img src="IMAGES/Blog/2024-08/ApprendreHTML-CSS.png" alt="ApprendreHTML OpenClassroom" class="hidden-image" data-overlay="Début de mon apprentissage sur Openclassroom">
+                                    <div class="arrow right" onclick="nextImage()">&#10095;</div>
+                                </div>
+                                <!-- Texte de superposition pour les images -->
+                                <div id="overlay-text" class="overlay-text">Comprendre le web</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Septembre 2024 -->
+            <div class="moisligne">
+                <div class="timeline-point right" data-id="septembre">
+                    <span class="timeline-dot timeline-dot-septembre2024" onclick="toggleDetails('septembre-details')"></span>
+
+                    <!-- Titre de la date -->
+                    <div class="date" onclick="toggleDetails('septembre-details')">
+                        <span>Septembre 2024</span>
+                    </div>
+                    
+                    <!-- Section détails -->
+                    <div id="septembre-details" class="details">
+                        <div class="details-content">
+
+                            <!-- Section gauche : Contenu textuel -->
+                            <div class="text-container">
+                                <h3>On continue d'apprendre, on cherche des formations !</h3>
+                                <p>Après avoir suivi les premiers cours sur OpenClassrooms, j’ai terminé les leçons et les exercices pour apprendre le CSS. Mon objectif : créer un site fictif pour un photographe en suivant les consignes. Ensuite, j’ai entamé l’apprentissage du JavaScript.</p>
+                                <p>Suite à une réunion d'informations concernant une formation de développeur web, j’ai décidé de montrer ma motivation et ce que j’ai appris en réalisant ce site internet.</p>
+                                <p>Une fois le site en ligne sur GitHub, j’ai fait un maximum d’exercices sur Khan Academy pour continuer à progresser.</p>
+                            </div>
+
+                            <!-- Section droite : Diaporama d'images -->
+                            <div class="image-container">
+                                <div class="image-diapo">
+                                    <div class="arrow left" onclick="prevImage()">&#10094;</div>
+                                    <img src="IMAGES/Blog/2024-09/FauxSite.png" alt="Faux site" class="active-image" data-overlay="Faux site pour apprentissage">
+                                    <img src="IMAGES/Blog/2024-09/Garage404.jpg" alt="Garage404" class="hidden-image" data-overlay="Formation Garage404">
+									<img src="IMAGES/Blog/2024-09/KhanAcademy.png" alt="KhanAcademy" class="hidden-image" data-overlay="Pleins d'excercies sur KhanAcademy">
+									<img src="IMAGES/Blog/2024-09/Site1.png" alt="Imagesite1" class="hidden-image" data-overlay="Image de mon site 1">
+									<img src="IMAGES/Blog/2024-09/Site2.png" alt="Imagesite2" class="hidden-image" data-overlay="Image de mon site 2">
+									<img src="IMAGES/Blog/2024-09/Site3.png" alt="Imagesite3" class="hidden-image" data-overlay="Image de mon site 3">
+									<img src="IMAGES/Blog/2024-09/Site4.png" alt="Imagesite4" class="hidden-image" data-overlay="Image de mon site 4">
+									<img src="IMAGES/Blog/2024-09/Site5.png" alt="Imagesite5" class="hidden-image" data-overlay="Image de mon site 5">
+									<img src="IMAGES/Blog/2024-09/Site6.png" alt="Imagesite6" class="hidden-image" data-overlay="Image de mon site 6">
+									
+                                    <div class="arrow right" onclick="nextImage()">&#10095;</div>
+                                </div>
+                                <!-- Texte de superposition pour les images -->
+                                <div id="overlay-text" class="overlay-text">Faux site pour apprentissage</div> 
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Octobre 2024 -->
+            <div class="moisligne">
+                <div class="timeline-point left" data-id="octobre">
+                    <span class="timeline-dot-aout2024 timeline-dot-octobre2024" onclick="toggleDetails('octobre-details')"></span>
+                    <div class="date" onclick="toggleDetails('octobre-details')">
+                        <span>Octobre 2024</span>
+                    </div>
+                    
+                    <!-- Section détails -->
+                    <div id="octobre-details" class="details">
+                        <div class="details-content">
+
+                            <!-- Section gauche : Contenu textuel -->
+                            <div class="text-container">
+                                <h3>J'améliore mon site, et ajout d'une page</h3>
+                                <p>Après quelques jours de repos suite au COVID, je reprends mon site modifie quelques détails et rajoute une page: BLOG. L'objectif étant de montrer mon évolution dans le monde du codage et ma progression.</p>
+                                <p>LA PAGE EST ENCORE EN COURS DE CONSTRUCTION</p>
+                            </div>
+
+                            <!-- Section droite : Diaporama d'images -->
+                            <div class="image-container">
+                                <div class="image-diapo">
+                                    <div class="arrow left" onclick="prevImage()">&#10094;</div>
+									
+                                    <img src="IMAGES/Blog/2024-10/En cours de codage.png" alt="Blog" class="active-image" data-overlay="Blog en cours de codage">
+                   
+                                    <div class="arrow right" onclick="nextImage()">&#10095;</div>
+                                </div>
+                                <!-- Texte de superposition pour les images -->
+                                <div id="overlay-text" class="overlay-text">Blog en cours de codage</div> 
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section pied de page -->
+    <footer id="footer" class="footer">
+        <div class="piedpage">
+            <div class="footer-main">
+                <span class="sayhello">SAY HELLO</span>
+                <ul>
+                    <li class="pied">hello.devfougerouse@gmail.com</li>
+                </ul>
+            </div>
+            <ul class="footer-site-nav">
+                <li><a href="">Accueil</a></li>
+            </ul>
+        </div>
+        <hr class="ligne">
+        <div class="footer-bottom">
+            <span class="copyright">© FOUGEROUSE Élodie 2024</span>
+            <div class="footer-social">
+                <a href="HTML-index.html" class="logo-icon">
+                    <img src="IMAGES/Logo/110827_moon_icon.png" alt="Moon Logo" class="lien-icone2"/>
+                </a>
+                <a target="_blank" href="https://x.com/ElodieFougerou2" class="lien-icone">
+                    <img src="IMAGES/Logo/icons8-twitter-48.png" alt="Logo Twitter/X" class="lien-icone"/>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/elodie-fougerouse-034772210/" class="lien-icone">
+                    <img src="IMAGES/Logo/icons8-linkedin-50.png" alt="Logo LinkedIn" class="lien-icone"/>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script externe pour la page -->
+    <script src="JS-blog.js"></script>
+</body>
+</html>

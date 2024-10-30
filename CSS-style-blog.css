@@ -1,0 +1,402 @@
+@charset "utf-8";
+
+/* ------------------ SECTION SKILLBAR ------------------ */
+/* Barre d'évolution des compétences */
+#evolution-skillbar {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    padding: 2.5em;          
+    background-color: #0F1930;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #dda55e;
+    font-family: "cooper-black-std", serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+	width: 100%;
+	margin-left: 40%;
+	
+	
+}
+h2 {
+    color: #0F1930;
+    font-family: "cooper-black-std", serif;
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+.skills{
+	width: 35%;
+}
+
+/* Animations des barres de compétences */
+@keyframes fill-skill-75 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes fill-skill-50 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes fill-skill-15 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 15%;
+    }
+}
+
+@keyframes fill-skill-3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 3%;
+    }
+}
+
+/* Styles des barres de compétences */
+.skills {
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px 50px;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.skills p {
+    color: black;
+    font-weight: bold;
+}
+
+.progress {
+    width: 100%;
+    background-color: #C4C4C4;
+    margin: 1em 0em;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.html {
+    background-color: #dda55e;
+    animation-name: fill-skill-75;
+}
+
+.css {
+    background-color: #0f1930;
+    animation-name: fill-skill-50;
+}
+
+.js {
+    background-color: #dda55e;
+    animation-name: fill-skill-15;
+}
+
+.php {
+    background-color: #0f1930;
+    animation-name: fill-skill-3;
+}
+
+
+/* ------------------ SECTION TIMELINE ------------------ */
+/* Conteneur de la timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2em;
+    position: relative;
+    height: 100vh;
+}
+
+.timeline-container {
+    position: relative;
+    width: 50%;
+}
+
+.timeline h2 {
+    z-index: 2;
+    margin-right: 30%;
+}
+
+/* Points de la timeline (gauche et droite) */
+.timeline-point {
+    margin-bottom: 10.5rem;
+    position: relative;
+    width: 45%;
+}
+
+.left {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.right {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+/* Styles des dates de la timeline */
+.date {
+    cursor: pointer;
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: #0F1930;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.left .date {
+    background-color: #DDA55E;
+}
+
+.right .date {
+    background-color: #0F1930;
+}
+
+.left .date:hover {
+    background-color: #0F1930;
+    color: white;
+}
+
+.right .date:hover {
+    background-color: #DDA55E;
+    color: white;
+}
+
+/* ------------------ POINTS TIMELINE ------------------ */
+/* Styles des points de la timeline */
+.timeline-dot {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 8px solid #dda55e;
+    border-radius: 50%;
+    margin: auto;
+    z-index: 1;
+}
+
+.timeline-dot-aout2024 {
+    position: absolute;
+    top: 50%;
+    right: -17.8%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 8px solid #dda55e;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-dot-septembre2024 {
+    position: absolute;
+    top: 50%;
+    left: -11.1%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 8px solid #dda55e;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-dot-octobre2024 {
+    position: absolute;
+    top: 50%;
+    right: -17.8%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 8px solid #dda55e;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+/* Effet au survol et à l'activation des points */
+.timeline-dot-aout2024:hover,
+.timeline-dot-septembre2024:hover,
+.timeline-dot-octobre2024:hover {
+    background-color: #dda55e;
+}
+
+.timeline-dot-aout2024:active,
+.timeline-dot-septembre2024:active,
+.timeline-dot-octobre2024:active {
+    background-color: #0f1930;
+}
+
+/* Ligne de la timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #dda55e;
+    transform: translateX(-50%);
+    animation: grow-line 6s ease-in-out forwards;
+    z-index: 0;
+}
+
+@keyframes grow-line {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 120%;
+    }
+}
+
+/* ------------------ DÉTAILS TIMELINE ------------------ */
+/* Styles pour les détails de la timeline */
+/*.details {
+    display: none;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+	overflow: hidden;
+}*/
+
+.details.open {
+    display: block;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.details-content {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #8E8E8E;
+}
+
+.left .details-content {
+    float: right;
+}
+
+.right .details-content {
+    float: left;
+}
+
+.text-container {
+    flex: 50%;
+    margin-right: 20px;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ------------------ SECTION DIAPO IMAGE ------------------ */
+/* Styles pour les images et diaporamas */
+.image-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-diapo {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-diapo img {
+    width: 300px;
+    height: auto;
+    display: none;
+}
+
+.image-diapo .active-image {
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: fit-content;
+    color: white;
+    font-size: 0.7em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1px 10px;
+    border-radius: 6px;
+    transition: opacity 0.5s ease;
+}
+
+/* ------------------ FLECHES DE NAVIGATION ------------------ */
+/* Styles des flèches de navigation */
+.arrow {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.arrow.left {
+    position: absolute;
+    left: 10px;
+}
+
+.arrow.right {
+    position: absolute;
+    right: 10px;
+}

@@ -1,0 +1,479 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*TELEPHONE PORTABLE max 600px*/
+@media only screen and (max-width: 600px) {
+/* ------------------ SECTION SKILLBAR ------------------ */
+/* Barre d'évolution des compétences */
+h1 {
+    font-size: 1.9em;
+	margin-left: 2%;
+}
+	
+h2 {
+    font-size: 1.2em;
+}
+
+.skills{
+	width: 60%;
+}
+
+/* Animations des barres de compétences */
+@keyframes fill-skill-75 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 45%;
+    }
+}
+
+@keyframes fill-skill-50 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 30%;
+    }
+}
+
+@keyframes fill-skill-15 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 10%;
+    }
+}
+
+@keyframes fill-skill-3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 0.5%;
+    }
+}
+
+/* Styles des barres de compétences */
+.skills {
+    margin: 2px 0;
+}
+
+/* ------------------ SECTION TIMELINE ------------------ */
+/* Conteneur de la timeline */
+.timeline-container {
+    width: 100%;
+}
+
+/* Points de la timeline (gauche et droite) */
+.timeline-point {
+    margin-bottom: 10.5rem;
+    position: relative;
+    width: 45%;
+}
+	
+.timeline-dot-aout2024 {
+    left: 110%; 
+}
+
+@keyframes grow-line {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 110%;
+    }
+}
+	.date{}
+
+/* ------------------ DÉTAILS TIMELINE ------------------ */
+.details-content {
+    max-height: 300px;
+    overflow-y: auto; 
+	display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding: 1rem;
+}
+
+	.details-content h3{
+	font-size: 1em;
+	text-align: center;
+}
+
+
+.text-container {
+    margin-right: 0px;
+    font-size: 0.7em;
+}
+
+/* ------------------ SECTION DIAPO IMAGE ------------------ */
+/* Styles pour les images et diaporamas */
+.image-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-diapo img {
+    width: 200px;
+}
+
+/* ------------------ FLECHES DE NAVIGATION ------------------ */
+/* Styles des flèches de navigation */
+.arrow {
+    padding: 5px;
+}
+}
+
+/*TABLETTE 600px et 1024px*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) {	
+/* ------------------ SECTION SKILLBAR ------------------ */
+/* Barre d'évolution des compétences */
+h1 {
+	margin-left: 2%;
+}
+	
+h2 {
+    font-size: 1.5em;
+}
+
+.skills{
+	width: 75%;
+}
+
+/* Animations des barres de compétences */
+@keyframes fill-skill-75 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 45%;
+    }
+}
+
+@keyframes fill-skill-50 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes fill-skill-15 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 5%;
+    }
+}
+
+@keyframes fill-skill-3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 0.5%;
+    }
+}
+
+/* Styles des barres de compétences */
+.skills {
+    margin: 5px 0;
+}
+
+/* ------------------ SECTION TIMELINE ------------------ */
+/* Conteneur de la timeline */
+.timeline-container {
+    width: 100%;
+}
+
+/* Points de la timeline (gauche et droite) */
+.timeline-point {
+    margin-bottom: 10.5rem;
+    position: relative;
+    width: 45%;
+}
+	
+.timeline-dot-aout2024 {
+    left: 110%; 
+}
+
+@keyframes grow-line {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+/* ------------------ DÉTAILS TIMELINE ------------------ */
+.details-content {
+    overflow-y: auto; 
+	display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding: 1rem;
+}
+
+	.details-content h3{
+	font-size: 1.3em;
+	text-align: center;
+}
+
+
+.text-container {
+    margin-right: 0px;
+    font-size: 0.75em;
+}
+
+/* ------------------ SECTION DIAPO IMAGE ------------------ */
+/* Styles pour les images et diaporamas */
+.image-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-diapo img {
+    width: 200px;
+}
+
+/* ------------------ FLECHES DE NAVIGATION ------------------ */
+/* Styles des flèches de navigation */
+.arrow {
+    padding: 8px;
+}
+}
+	
+	
+/*PETIT ECRAN ORDINATEUR ENTRE 1025px et 1440px*/
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+/* ------------------ SECTION SKILLBAR ------------------ */
+/* Barre d'évolution des compétences */
+h1 {
+    font-size: 2.2em;
+	margin-left: 15%;
+}
+	
+h2 {
+    font-size: 1.4em;
+}
+
+.skills{
+	width: 70%;
+}
+
+/* Animations des barres de compétences */
+@keyframes fill-skill-75 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 55%;
+    }
+}
+
+@keyframes fill-skill-50 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 43%;
+    }
+}
+
+@keyframes fill-skill-15 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 7%;
+    }
+}
+
+@keyframes fill-skill-3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 0.5%;
+    }
+}
+
+/* Styles des barres de compétences */
+.skills {
+    margin: 5px 0;
+}
+
+/* ------------------ SECTION TIMELINE ------------------ */
+/* Conteneur de la timeline */
+.timeline-container {
+    width: 100%;
+}
+
+/* Points de la timeline (gauche et droite) */
+.timeline-point {
+    margin-bottom: 2.5rem;
+    position: relative;
+    width: 45%;
+}
+	
+.timeline-dot-aout2024 {
+    left: 111%; 
+}
+
+@keyframes grow-line {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 110%;
+    }
+	}
+
+/* ------------------ DÉTAILS TIMELINE ------------------ */
+.details-content{
+    max-height: 300px;
+    overflow-y: auto; 
+	display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    padding: 1.5rem;
+}
+
+	.details-content h3{
+	font-size: 1.6em;
+	text-align: center;
+}
+
+
+.text-container {
+    margin-right: 0px;
+    font-size: 0.8em;
+}
+
+/* ------------------ SECTION DIAPO IMAGE ------------------ */
+/* Styles pour les images et diaporamas */
+
+.image-diapo img {
+    width: 300px;
+}
+
+/* ------------------ FLECHES DE NAVIGATION ------------------ */
+/* Styles des flèches de navigation */
+.arrow {
+    padding: 7px;
+}
+}
+	
+	
+
+/*ECRAN ORDI 1441px ET 1799px*/
+@media only screen and (min-width: 1441px) and (max-width: 1799px) {
+  /* ------------------ SECTION SKILLBAR ------------------ */
+/* Barre d'évolution des compétences */
+
+.skills{
+	width: 65%;
+}
+
+/* Styles des barres de compétences */
+.skills {
+    margin: 5px 0;
+}
+
+/* ------------------ SECTION TIMELINE ------------------ */
+/* Conteneur de la timeline */
+.timeline-container {
+    width: 80%;
+}
+
+/* Points de la timeline (gauche et droite) */
+.timeline-point {
+    margin-bottom: 1.5rem;
+}
+	
+.timeline-dot-aout2024 {
+    left: 111%; 
+}
+
+/* ------------------ DÉTAILS TIMELINE ------------------ */
+
+	.details-content h3{
+	font-size: 1.3em;
+}
+
+
+.text-container {
+    margin-right: 0px;
+    font-size: 0.7em;
+}
+
+/* ------------------ SECTION DIAPO IMAGE ------------------ */
+/* Styles pour les images et diaporamas */
+
+.image-diapo img {
+    width: 220px;
+	padding: 1em;
+}
+
+/* ------------------ FLECHES DE NAVIGATION ------------------ */
+/* Styles des flèches de navigation */
+.arrow {
+    padding: 8px;
+}
+} 
+
+
+
+
+/*ECRAN ORDINATEUR ENTRE 1800px et 2399px*/
+@media only screen and (min-width : 1800px ) and ( max-width : 2399px ){
+
+
+/* Points de la timeline (gauche et droite) */
+.timeline-point {
+    margin-bottom: 5.5rem;
+}
+	
+.timeline-dot-aout2024 {
+    left: 111%; 
+}
+
+/* ------------------ DÉTAILS TIMELINE ------------------ */
+	
+
+	.details-content {
+    padding: 1rem;
+	width: 130%;
+}
+
+	.details-content h3{
+	font-size: 1.2em;
+}
+
+
+.text-container {
+    margin-right: 0px;
+    font-size: 0.8em;
+	width: 100%;
+}
+
+
+/* ------------------ SECTION DIAPO IMAGE ------------------ */
+/* Styles pour les images et diaporamas */
+
+.image-diapo img {
+    width: 240px;
+	padding: 1em;
+}
+}

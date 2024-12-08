@@ -13,7 +13,13 @@
 
     <link rel="preload" href="https://use.typekit.net/ean4ozv.css" as="style">
     <link rel="stylesheet" href="https://use.typekit.net/ean4ozv.css">
+
+    <!-- CUSTOM CSS et JAVASCRIPT-->
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/script.js" defer></script>
+
+    <!-- BOX ICONS  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
     <!-- RAJOUTER UNE IMAGE ICI -->
@@ -31,46 +37,33 @@
 </head>
 
 <body>
-    <div class="outer-container">
-        <div class="inner-container">
-            <header class="alt-section">
-                <div class="container">
-                    <span class="site-name"><a href="index.html">Moonye</a></span>
-                    <nav>
-                        <ul>
-                            <li class="current"><a href="index.html">Home</a></li>
-                            <li><a href="work.html">Work</a></li>
-                            <li><a href="/words/re-introduction.html">Words</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+    <!-- HEADER DESIGN -->
+    <header class="header">
+        <a href="#" class="logo">Moonye.</a>
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
 
-            <section class="introduction">
-                <div class="container">
-                    <h1 class="very-inset">When night falls, ideas shine under the light of the moon.</h1>
-                    <div class="super-inset">
-                        <p>
-                            Hello ! Je m'appelle Élodie Fougerouse.</p>
-                    </div>
-                    <div class="text-container">
-                        I'm a <span id="dynamic-text"></span>
-                      </div>
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+    </header>
 
+    <!-- HOME SECTION DESIGN -->
+    <main>
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello, I am</h3>
+                <h1>Élodie Fougerouse</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, voluptates ullam nam nobis
+                    asperiores ut obcaecati fugiat hic atque ratione officia amet a tempore consequatur laborum ex
+                    laboriosam, eius delectus!</p>
 
-                </div>
-                <div class="star-graphics star-lady"></div>
-                <div class="star-graphics star-owl"></div>
-                <div class="star-graphics star-top"></div>
-                <div class="star-graphics star-bottom"></div>
-                <div class="orbit orbit-1"></div>
-                <div class="orbit orbit-2"></div>
-            </section>
-
-            <body>
-
-            </body>
+            </div>
+        </section>
+    </main>
+</body>
 
 </html>

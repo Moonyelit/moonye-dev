@@ -1,137 +1,116 @@
+/* BASE ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+
 @charset "UTF-8";
 
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 10%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-
-/* FONT  ------------------------------------------------------------------
-------------------------------------------------------------------------------------
---------------------------------------------------------------------------------- */
 @font-face {
   font-family: "RegardsRegular";
-  src: url('./fonts/regards-webfont.woff2') format('woff2'),
-       url('./fonts/regards-webfont.woff') format('woff'),
-       url('./fonts/regards.ttf') format('truetype'),
-       url('./fonts/regards.otf') format('opentype');
+  src: url("./fonts/regards-webfont.woff2") format("woff2"),
+    url("./fonts/regards-webfont.woff") format("woff"),
+    url("./fonts/regards.ttf") format("truetype"),
+    url("./fonts/regards.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
 
-  /* LAYOUT styles -------------------------------------------------------------------
-------------------------------------------------------------------------------------
---------------------------------------------------------------------------------- */
+:root {
+  /* Couleurs */
+  --bg-color: #f0d09a;
+  --text-color: #292420;
+  --text-color2: #2c2622;
+  --hover-color: #e09b2b;
+  --hover-color2: #574b43;
+  --main-color: #faefdd;
+  --white-color: #fbf1e1;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+
+  /* Polices */
+  --main-font: "Quasimoda", "ivyora-text", sans-serif;
+  --title1: "RegardsRegular", sans-serif;
+  --nav-a:"logic-monospace", mono;
+}
+
+/* BODY STYLE ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: #f0d09a;
-    color: #292420;
-    margin: 0;
-    height: 100%;
-    font-family: "Quasimoda", "ivyora-text", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    letter-spacing: -0.01em;
-    line-height: 1.5em;
-  }
+  background: var(--bg-color);
+  color: var(--text-color);
+}
 
-  .outer-container {
-    margin: 24px;
-    border: 1px solid black;
-    overflow: hidden;
-  }
+/* HEADER ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
 
-  .inner-container {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .container {
-    max-width: 1416px;
-    margin: 0 auto;
-    padding: 80px 8.474576271%; /* 120/1416 */
-  }
-  
-  .very-inset {
-    margin-left: auto;
-    margin-right: auto;
-    width: 66.10169492%; /* 694/1416 */
-  }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: var(--text-color);
+display: flex;
+align-items: center;
+z-index: 100;
+}
 
-  .somewhat-inset {
-    margin: 0 auto 0 8.474576271%;
-    width: 66.10169492%; /* 694/1416 */
-  }
+.logo{
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 600;
+  font-family: var(--title1);
+  cursor: default;
+  margin-right: auto;
+}
 
-  section {
-    background: #faefdd;
-  }
+.navbar a{
+position: relative;
+font-size: 1.7rem;
+color: var(--white-color);
+font-weight: 500;
+font-family: var(--nav-a);
+margin-right: 3.5rem;
+}
 
-  .alt-section {
-    background: #2C2622;
-    color: #fbf1e1;
-  }
+.navbar a.active::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: .2rem;
+  background: var(--white-color);
+}
 
-  .alt-section a {
-    border-bottom: 0.5px solid #faefdd;
-    color: #faefdd;
-  }
-
-  .alt-section a:hover {
-    color: #f0d09a;
-  }
-  .alt-section .site-name a:hover {
-    color: #f0d09a;
-  }
-  
-  .alt-section + .alt-section {
-    border-top: 0.5px solid #faefdd;
-  }
-
-  hr {
-    border: none;
-    border-top: 0.5px solid #faefdd;
-    margin-bottom: 56px;
-  }
-
-  /* Typography styles ---------------------------------------------------------------
-------------------------------------------------------------------------------------
---------------------------------------------------------------------------------- */
+#darkMode-icon{
+  font-size: 2.4rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+.
+/* FONTS ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+/* 
 h1, h2 {
-  font-family: 'regardsregular', sans-serif;
+  font-family: regardsregular, sans-serif;
   font-weight: 400;
-  /*	font-style: italic;*/
   letter-spacing: -0.015em;
   font-feature-settings: "swsh", "liga";
   font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
@@ -157,7 +136,7 @@ h3 {
   font-weight: 400;
   line-height: 1.35em;
   margin: 40px 0 0 0;
-}
+}*
 
 h4, .section-description {
   font-family: regardsregular, sans-serif;
@@ -183,9 +162,9 @@ em {
 
 strong {
   font-weight: 600;
-}
+} */
 
-.emphasized {
+/* .emphasized {
   border-bottom: 0.5px solid #faefdd;
   border-top: 0.5px solid #faefdd;
   font-size: 26px;
@@ -194,9 +173,9 @@ strong {
   line-height: 1.35em;
   margin-top: 48px;
   padding: 24px 0;
-}
+} */
 
-.featured-link,
+/* .featured-link,
 .text-page .featured-link {
   border-bottom: 0.5px solid #2C2622;
   display: inline-block;
@@ -212,82 +191,4 @@ strong {
 
 .nowrap {
   white-space: nowrap;
-}
-
-
-/* Header and footer styles --------------------------------------------------------
-------------------------------------------------------------------------------------
---------------------------------------------------------------------------------- */
-header, footer {
-  background: #faefdd;
-}
-
-header .container,
-footer .container,
-header.alt-section .container,
-footer.alt-section .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 8.474576271% 16px 8.474576271%; /* 120/1416 */
-}
-header ul,
-footer ul,
-header.alt-section ul,
-footer.alt-section ul {
-  display: flex;
-  justify-content: space-between;
-}
-header li,
-footer li,
-header.alt-section li,
-footer.alt-section li {
-  font-family: "logic-monospace", mono;
-  font-style: normal;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  line-height: 1.5em;
-  margin-left: 16px;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-header li a,
-footer li a,
-header.alt-section li a,
-footer.alt-section li a {
-  border: none;
-  display: block;
-  line-height: 1.3em;
-  padding: 4px;
-}
-header li a:hover,
-footer li a:hover,
-header.alt-section li a:hover,
-footer.alt-section li a:hover {
-  border: none;
-}
-header .current a,
-footer .current a,
-header.alt-section .current a,
-footer.alt-section .current a {
-  font-family: "logic-monoscript", mono;
-  border-bottom: 0.5px solid #827165;
-  margin: 0 4px;
-  padding: 4px 0 0 0;
-}
-
-header.alt-section .current a,
-footer.alt-section .current a {
-  color: #fbf1e1;
-  border-bottom: 0.5px solid #fbf1e1;
-}
-
-.site-name {
-  font-family: regardsregular, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 24px;
-  letter-spacing: 0.01em;
-}
-.site-name a {
-  border: none;
-}
+} */

@@ -35,10 +35,73 @@
   --white-color: #fbf1e1;
   --shadow-color: rgba(0, 0, 0, 0.2);
 
+  *::selection {
+    background: var(--hover-color2);
+    color: var(--bg-color);
+  }
+
   /* Polices */
   --main-font: "Quasimoda", "ivyora-text", sans-serif;
   --title1: "RegardsRegular", sans-serif;
   --nav-a: "logic-monospace", mono;
+}
+/* DARK STYLE ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+.dark-mode {
+  --bg-color: #292420;
+  --text-color: #fbf1e1;
+  --text-color2: #574b43;
+  --shadow-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .header.sticky {
+  --text-color: #574b43;
+}
+
+.dark-mode .btn {
+  --text-color: #574b43;
+}
+
+.dark-mode .btn:hover {
+  --hover-color2: #fbf1e1;
+  --white-color: #292420;
+}
+
+.dark-mode span {
+  --main-color: #574b43;
+}
+
+.dark-mode .services-container .services-box {
+  --text-color: #292420;
+  color: #292420;
+}
+
+.dark-mode .services-container .services-box h3 {
+  --text-color: #574b43;
+}
+
+.dark-mode .services-container .services-box h3:hover {
+  --text-color: #292420;
+}
+
+.dark-mode .portfolio-box .portfolio-layer {
+  --white-color: #292420;
+  --text-color: #fbf1e1;
+}
+
+.dark-mode .portfolio-layer {
+  --white-color: #292420;
+  --text-color: #fbf1e1;
+}
+
+.dark-mode footer p {
+  color: #292420;
+}
+
+.dark-mode .footer-iconTop a {
+  --main-color: #574b43;
+  --hover-color2: var(--text-color);
 }
 
 /* BODY STYLE ******************************************************************************************************************************************
@@ -54,6 +117,15 @@ body {
   color: var(--text-color);
 }
 
+/* SECTION ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+
+section {
+  min-height: 100vh;
+  padding: 10rem 7% 2rem;
+}
+
 /* HEADER ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -63,7 +135,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 7%;
+  padding: 1rem 7%;
   background: transparent; /*potentiellemen à enlever en ajoutant transparent ou var(--text-color); */
   display: flex;
   align-items: center;
@@ -77,7 +149,7 @@ body {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--text-color);
   font-weight: 600;
   font-family: var(--title1);
@@ -85,24 +157,24 @@ body {
   margin-right: auto;
 }
 
-.header.sticky .logo {
-  color: var(--white-color);
-}
-
-.header.sticky .navbar a.active {
-  color: var(--bg-color);
-}
-
 .navbar a {
   position: relative;
-  font-size: 1.7rem;
+  font-size: 1rem;
   color: var(--white-color);
   font-weight: 500;
   font-family: var(--nav-a);
   margin-right: 3.5rem;
 }
 
+.header.sticky .navbar a.active {
+  color: var(--bg-color);
+}
+
 .header.sticky.navbar a {
+  color: var(--white-color);
+}
+
+.header.sticky .logo {
   color: var(--white-color);
 }
 
@@ -126,7 +198,7 @@ body {
 }
 
 #darkMode-icon {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: var(--white-color);
   cursor: pointer;
 }
@@ -142,15 +214,6 @@ body {
   display: none;
 }
 
-/* SECTION ******************************************************************************************************************************************
-***************************************************************************************************************************************************
-************************************************************************************************************************************************* */
-
-section {
-  min-height: 100vh;
-  padding: 10rem 7% 2rem;
-}
-
 /* HOME  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -161,33 +224,34 @@ section {
 }
 
 .home .home-content {
-  max-width: 44rem;
+  max-width: 35rem;
+  width: 40%;
 }
 
 .home-content h3 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 0.3;
   font-family: var(--title1);
 }
 
 .home-content h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
   font-family: var(--title1);
 }
 
 .home-content p {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .home-content .social-media a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: transparent;
   border: 0.2rem solid var(--text-color);
   border-radius: 50%;
@@ -218,15 +282,15 @@ section {
 }
 
 .btn:hover {
-  background: transparent;
-  color: var(--text-color);
-  border-color: var(--text-color);
+  background: var(--hover-color2);
+  color: var(--white-color);
+  border-color: var(--hover-color2);
 }
 
 .home .profession-container {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 0px;
   transform: translateY(-50%);
   width: 100vw;
   height: 100vh;
@@ -283,6 +347,8 @@ section {
   transform-origin: 384px;
   background: var(--bg-color);
   padding: 13px 0;
+  min-width: 200px;
+  text-align: center;
 }
 
 .home .profession-box .profession:nth-child(1) i {
@@ -299,14 +365,14 @@ section {
 }
 
 .home .profession h3 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   line-height: 1;
   font-weight: 600;
 }
 
 .home .profession-box .circle {
-  width: 560px;
-  height: 560px;
+  width: 580px;
+  height: 580px;
   border: 3px solid var(--text-color);
   border-radius: 50%;
   z-index: -1;
@@ -318,9 +384,9 @@ section {
   right: 0;
   width: 0;
   height: 0;
-  border-top: 50vh solid var(--text-color);
-  border-right: 384px solid var(--text-color);
-  border-bottom: 50vh solid var(--text-color);
+  border-top: 50vh solid var(--text-color2);
+  border-right: 384px solid var(--text-color2);
+  border-bottom: 50vh solid var(--text-color2);
   border-left: 384px solid transparent;
 }
 
@@ -346,6 +412,9 @@ span {
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  max-height: 110vh;
+  min-height: 100vh;
+  padding: 8rem 7% 2rem;
 }
 
 .about-img img {
@@ -379,6 +448,8 @@ span {
 .services {
   min-height: auto;
   padding-bottom: 10rem;
+  max-height: 100vh;
+  min-height: 80vh;
 }
 
 .services h2 {
@@ -421,7 +492,7 @@ span {
 }
 
 .services-box:hover h3 {
-  color: var(--hover-color);
+  color: var(--hover-color2);
 }
 
 .services-box p {
@@ -494,7 +565,7 @@ span {
 }
 
 .portfolio-layer p {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   margin: 0.3 0 1rem;
 }
 
@@ -654,11 +725,11 @@ span {
 
 @media (max-width: 991px) {
   .navbar a:nth-child(1) {
-    color: var(--text-color);
+    color: var(--main-color);
   }
 
-  .nav a.active::before {
-    background: var(--text-color);
+  .navbar a.active::before {
+    background: var(--main-color);
     opacity: 0.7;
   }
 
@@ -670,12 +741,12 @@ span {
     right: -35%;
   }
 
-  .home.profession-container .overlay {
+  .home .profession-container .overlay {
     right: -30%;
   }
 
   .home-img img {
-    display: none;
+    right: -3%;
   }
 
   .footer {
@@ -685,7 +756,7 @@ span {
 
 @media (max-width: 896px) {
   .navbar a:nth-child(2) {
-    color: var(--text-color);
+    color: var(--main-color);
   }
 
   .home .profession-container .profession-box {
@@ -694,6 +765,10 @@ span {
 
   .home .profession-container .overlay {
     right: -43%;
+  }
+
+  .home-img img {
+    display: none;
   }
 }
 
@@ -727,9 +802,10 @@ span {
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--text-color);
+    padding: 1rem 3%;
+    background: var(--bg-color);
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5rem 1rem var(--shadow-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     display: none;
   }
 
@@ -741,16 +817,16 @@ span {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
-    color: var(--white-color);
+    color: var(--text-color);
   }
 
   .navbar a:nth-child(1),
   .navbar a:nth-child(2) {
-    color: var(--white-color);
+    color: var(--text-color);
   }
 
   .navbar a.active {
-    color: var(--text-color);
+    color: var(--main-color);
   }
 
   .navbar a::before {
@@ -843,11 +919,18 @@ span {
     width: 70vw;
     margin-top: -2rem;
   }
-}
 
-@media (max-width: 580px) {
-  .portfolio .portfolio-container {
-    grid-template-columns: 1fr;
+  .testimonial-container .testimonial-wrapper {
+    padding: 5rem 0;
+  }
+
+  .testimonial-content .testimonial-slide {
+    padding: 3rem 2rem;
+  }
+
+  .testimonial-box .swiper-button-next,
+  .testimonial-box .swiper-button-prev {
+    display: none;
   }
 }
 
@@ -900,15 +983,14 @@ span {
   }
 }
 
-
 @media (max-width: 365px) {
   .about-img img {
-      width: 90vw;
+    width: 90vw;
   }
 }
 
 @media (max-width: 315px) {
   .home-content h1 {
-      font-size: 4.5rem;
+    font-size: 4.5rem;
   }
 }

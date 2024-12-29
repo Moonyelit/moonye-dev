@@ -63,3 +63,6 @@ ScrollReveal().reveal(".home-content h1, .about-img img", { origin: "left" });
 ScrollReveal().reveal(".home-content h3, .home-content p, .about-content", {
   origin: "right",
 });
+
+/*========== scroll smooth ==========*/
+// Code de défilement supprimé

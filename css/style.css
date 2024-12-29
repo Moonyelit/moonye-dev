@@ -458,6 +458,7 @@ span {
   padding-bottom: 10rem;
   max-height: 100vh;
   min-height: 80vh;
+  margin-bottom: 10rem;
 }
 
 .services h2 {
@@ -816,7 +817,6 @@ span {
 }
 
 @media (max-width: 768px) {
-
   #menu-icon {
     display: block;
     color: var(--white-color);
@@ -824,7 +824,7 @@ span {
 
   #darkMode-icon {
     position: absolute;
-    right: 10rem; 
+    right: 10rem;
     font-size: 2.6rem;
     color: var(--white-color);
     margin-bottom: 0.1rem;
@@ -834,14 +834,14 @@ span {
     background: var(--text-color);
   }
 
-  .dark-mode .header{
+  .dark-mode .header {
     background: var(--hover-color2);
   }
 
   .logo {
     color: var(--white-color);
   }
-  
+
   .header.sticky #menu-icon {
     display: block;
     color: var(--white-color);
@@ -889,15 +889,18 @@ span {
     display: none;
   }
 
+  /* HOME  ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+
   .home {
     display: flex;
     align-items: center;
     padding: 0 3% 23rem;
     justify-content: center;
-    text-align: center;    
+    text-align: center;
     min-height: 100vh;
     padding-top: 10rem;
-
   }
 
   .home-content h3 {
@@ -969,13 +972,17 @@ span {
     border-width: 23.9rem;
   }
 
+  /* ABOUT  ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+
   .about {
     flex-direction: column-reverse;
     text-align: center;
     padding: 8rem 3% 2rem;
-    max-height: none; 
-    min-height: auto; 
-    gap: 2rem; 
+    max-height: none;
+    min-height: auto;
+    gap: 2rem;
   }
 
   .about-content h2 {
@@ -987,6 +994,10 @@ span {
     margin-top: -2rem;
   }
 
+  /* SERVICES  ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+
   .services {
     padding: 0rem 3% 5rem;
     min-height: 100vh;
@@ -996,21 +1007,90 @@ span {
   .services-container .services-box {
     flex: 1 1 30rem;
   }
+
+  /* PORTFOLIO  ******************************************************************************************************************************************
+***************************************************************************************************************************************************
+************************************************************************************************************************************************* */
+
+  .portfolio {
+    padding: 10rem 3% 2rem;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 3.5rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-layer a {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 580px) {
+  .home {
+    margin-top: 3rem;
+    padding: 1.5rem 2% 23rem;
+  }
+
+  .home .home-content {
+    max-width: 100rem;
+    width: 80%;
+  }
+
+  .home h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .home p {
+    font-size: 1.5rem;
+  }
+
+  .services {
+    padding-bottom: 5rem;
+    margin-bottom: 30rem;
+    min-height: auto;
+  }
+
+  .portfolio {
+    margin-top: 15rem;
+    min-height: auto;
+  }
+
   .portfolio .portfolio-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-layer h4 {
+    font-size: 1.7rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 1.3rem;
+  }
+
+  .portfolio-layer a {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
-  }
-
-  #darkMode-icon {
-    right: 6rem;
   }
 
   .home .profession-box .profession:nth-child(1) {
@@ -1033,6 +1113,27 @@ span {
     top: 80rem;
   }
 
+  .portfolio .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 3.5rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 2rem;
+  }
+
+  .portfolio-layer a {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 2.5rem;
+  }
+
   .contact form .input-box input {
     width: 100%;
   }
@@ -1048,6 +1149,23 @@ span {
 }
 
 @media (max-width: 365px) {
+  .home {
+    margin-top: 6rem;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .home-content .social-media a {
+    margin: 1rem 1.5rem 1rem 0;
+}
+
   .about-img img {
     width: 90vw;
   }
@@ -1056,5 +1174,22 @@ span {
 @media (max-width: 315px) {
   .home-content h1 {
     font-size: 4.5rem;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 1.6rem;
+  }
+
+  .portfolio-layer p {
+    font-size: 1.3rem;
+  }
+
+  .portfolio-layer a {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 2rem;
   }
 }

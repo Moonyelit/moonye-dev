@@ -264,6 +264,19 @@ section {
   opacity: 0.45;
 }
 
+.dark-mode .orbit {
+  background: url(../images/bg-orbit2.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  animation: rotation2 120s infinite linear;
+  opacity: 0.45;
+}
+
 @keyframes rotation2 {
   0% {
     transform: rotate(0deg);
@@ -496,6 +509,20 @@ span {
   z-index: 1; 
 }
 
+.dark-mode .about {
+  display: flex;
+   background: var(--bg-color);
+  background-size: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  max-height: 110vh;
+  min-height: 100vh;
+  padding: 8rem 7% 2rem;
+  position: relative; 
+  z-index: 1; 
+}
+
 .about::before {
   content: "";
   position: absolute;
@@ -509,9 +536,39 @@ span {
   pointer-events: none;
 }
 
+.about-img {
+  position: relative; 
+}
+
 .about-img img {
   width: 30vw;
+  position: relative;
+  left: 0; 
 }
+
+.dark-mode .about-img img {
+left: 8.5rem ;
+}
+
+.about-yellow {
+  display: block;
+}
+
+.about-black {
+  display: none;
+  opacity: 0;
+}
+
+.dark-mode .about-yellow {
+  display: none;
+  opacity: 0;
+}
+
+.dark-mode .about-black {
+  display: block;
+  opacity: 1;
+}
+
 
 .heading {
   font-size: 4.5rem;
@@ -556,6 +613,34 @@ span {
 /* SERVICES  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
+.angel-1 {
+  bottom: -10rem;
+  left: -28rem;
+}
+
+.angel {
+  background: url(../images/bg-star-lady.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  opacity: 0.8;
+}
+
+.dark-mode .angel {
+  background: url(../images/bg-star-lady2.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  opacity: 0.8;
+}
 
 .services {
   min-height: auto;
@@ -563,8 +648,8 @@ span {
   max-height: 100vh;
   min-height: 80vh;
   margin-bottom: 10rem;
-  position: relative; /* Ajoutez cette ligne */
-  z-index: 1; /* Ajoutez cette ligne */
+  position: relative; 
+  z-index: 1; 
 }
 
 .services h2 {
@@ -626,6 +711,10 @@ span {
   background: var(--text-color);
 }
 
+.dark-mode .portfolio {
+  background: var(--bg-color);
+}
+
 .portfolio::before {
   content: "";
   position: absolute;
@@ -642,6 +731,10 @@ span {
 .portfolio h2 {
   margin-bottom: 4rem;
   color: var(--bg-color);
+}
+
+.dark-mode .portfolio h2 {
+  color: var(--text-color);
 }
 
 .portfolio .portfolio-container {
@@ -718,6 +811,69 @@ span {
 /* CONTACT  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
+.orbit-2 {
+  top: 15rem;
+  left: -28rem;
+}
+
+.orbit2 {
+  background: url(../images/bg-orbit.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  animation: rotation2 120s infinite linear;
+  opacity: 0.45;
+}
+
+.dark-mode .orbit2 {
+  background: url(../images/bg-orbit2.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  animation: rotation2 120s infinite linear;
+  opacity: 0.45;
+}
+
+
+.balance-1 {
+  top: 15rem;
+  right: -28rem;
+}
+
+.balance {
+  background: url(../images/bg-globe.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  opacity: 0.45;
+}
+
+.dark-mode .balance {
+  background: url(../images/bg-globe2.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  opacity: 0.45;
+}
+
+
+
 
 .contact {
   position: relative; /* Ajoutez cette ligne */
@@ -1020,6 +1176,10 @@ span {
   /* HOME  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
+.orbit-1 {
+  top: -5rem;
+  left: -10rem;
+}
 
   .home {
     display: flex;
@@ -1122,6 +1282,11 @@ span {
     margin-top: -2rem;
   }
 
+  .about::before {
+    background-size: auto;
+  }
+  
+
   /* SERVICES  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -1136,6 +1301,10 @@ span {
     flex: 1 1 30rem;
   }
 
+  .angel{
+    display: none;
+  }
+
   /* PORTFOLIO  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -1143,6 +1312,11 @@ span {
   .portfolio {
     padding: 10rem 3% 2rem;
   }
+
+  .portfolio::before {
+    background-size: auto;
+  }
+
 
   .portfolio-layer h4 {
     font-size: 3.5rem;

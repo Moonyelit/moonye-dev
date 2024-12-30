@@ -52,7 +52,7 @@
   --bg-color: #292420;
   --text-color: #fbf1e1;
   --text-color2: #574b43;
-  --shadow-color: rgba(0, 0, 0, 0.7);
+  --shadow-color: #000000b3;
 }
 
 .dark-mode .header.sticky {
@@ -68,8 +68,21 @@
   --white-color: #292420;
 }
 
+.dark-mode .btn2 {
+  --text-color: #574b43;
+}
+
+.dark-mode .btn2:hover {
+  --hover-color2: #fbf1e1;
+  --white-color: #292420;
+}
+
 .dark-mode span {
   --main-color: #574b43;
+}
+
+.dark-mode .span2 {
+  --bg-color: #574b43;
 }
 
 .dark-mode .services-container .services-box {
@@ -116,6 +129,12 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   overflow-x: hidden;
+  position: relative; /* Ajoutez cette ligne */
+}
+
+main {
+  position: relative; /* Ajoutez cette ligne */
+  z-index: 1; /* Ajoutez cette ligne */
 }
 
 /* SECTION ******************************************************************************************************************************************
@@ -125,6 +144,8 @@ body {
 section {
   min-height: 100vh;
   padding: 10rem 7% 2rem;
+  z-index: 1; /* Ajoutez cette ligne */
+  position: relative; /* Ajoutez cette ligne */
 }
 
 /* HEADER ******************************************************************************************************************************************
@@ -225,9 +246,38 @@ section {
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
 
+.orbit-1 {
+  top: -15rem;
+  left: -28rem;
+}
+
+.orbit {
+  background: url(../images/bg-orbit.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  animation: rotation2 120s infinite linear;
+  opacity: 0.45;
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .home {
   display: flex;
   align-items: center;
+  position: relative; /* Ajoutez cette ligne */
+  z-index: 2; /* Ajoutez cette ligne */
 }
 
 .home .home-content {
@@ -407,6 +457,17 @@ section {
   max-height: 100vh;
 }
 
+/* Ajoutez les classes pour les étoiles et la comète */
+.stars, .stars2, .stars3, .comet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 /* ABOUT  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -415,14 +476,37 @@ span {
   color: var(--main-color);
 }
 
+.span2 {
+  color: var(--bg-color);
+}
+
+
 .about {
   display: flex;
+  background: var(--text-color);
+  background-size: 100%;
+  color: var(--white-color);
   justify-content: center;
   align-items: center;
   gap: 4rem;
   max-height: 110vh;
   min-height: 100vh;
   padding: 8rem 7% 2rem;
+  position: relative; 
+  z-index: 1; 
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg-meteor-shower.webp) 10% top no-repeat;
+  opacity: 0.3;
+  background-size: 150%;
+  pointer-events: none;
 }
 
 .about-img img {
@@ -449,6 +533,26 @@ span {
   margin: 2rem 0.3rem;
 }
 
+.btn2{
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--bg-color);
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+  font-size: 1.6rem;
+  color: var(--white-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border: 0.2rem solid transparent;
+  transition: 0.5s ease;
+}
+
+.btn2:hover {
+  background: var(--hover-color2);
+  color: var(--white-color);
+  border-color: var(--hover-color2);
+}
+
 /* SERVICES  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -459,6 +563,8 @@ span {
   max-height: 100vh;
   min-height: 80vh;
   margin-bottom: 10rem;
+  position: relative; /* Ajoutez cette ligne */
+  z-index: 1; /* Ajoutez cette ligne */
 }
 
 .services h2 {
@@ -516,10 +622,26 @@ span {
 .portfolio {
   min-height: auto;
   padding-bottom: 10rem;
+  position: relative; 
+  background: var(--text-color);
+}
+
+.portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg-star-chart-alt.webp) 10% top no-repeat;
+  opacity: 0.1;
+  background-size: 150%;
+  pointer-events: none;
 }
 
 .portfolio h2 {
   margin-bottom: 4rem;
+  color: var(--bg-color);
 }
 
 .portfolio .portfolio-container {
@@ -597,6 +719,11 @@ span {
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
 
+.contact {
+  position: relative; /* Ajoutez cette ligne */
+  z-index: 1; /* Ajoutez cette ligne */
+}
+
 .contact h2 {
   margin-bottom: 3rem;
 }
@@ -670,16 +797,17 @@ span {
   border-radius: 0.8rem;
   border: 0.2rem solid var(--hover-color2);
   outline: 0.2rem solid transparent;
-  transition: 0.5s ease;
+  transition: 0.5s ease;  
 }
 
 .footer-iconTop a:hover {
   outline-color: var(--bg-color);
+
 }
 
 .footer-iconTop a i {
   font-size: 2.4rem;
-  color: var (--text-color);
+  color: var(--text-color);
 }
 
 /* BREAKPOINT  ******************************************************************************************************************************************

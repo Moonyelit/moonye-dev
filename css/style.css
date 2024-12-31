@@ -172,7 +172,7 @@ section {
   }
   
   .logo {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     color: var(--text-color);
     font-weight: 600;
     font-family: var(--title1);
@@ -182,7 +182,7 @@ section {
   
   .navbar a {
     position: relative;
-    font-size: 1rem;
+    font-size: 1.8rem;
     color: var(--white-color);
     font-weight: 500;
     font-family: var(--nav-a);
@@ -221,7 +221,7 @@ section {
   }
   
   #darkMode-icon {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--white-color);
     cursor: pointer;
   }
@@ -239,7 +239,7 @@ section {
   
   .icons {
     display: flex;
-    gap: 1rem; /* Ajoutez un espacement entre les icônes */
+    gap: 1rem; 
   }
   
 

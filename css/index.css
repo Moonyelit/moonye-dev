@@ -3,15 +3,15 @@
 ************************************************************************************************************************************************* */
 
 .orbit-1 {
-  top: -15rem;
-  left: -28rem;
+  top: -30rem;
+  left: -30rem;
 }
 
 .orbit {
   background: url(../images/bg-orbit.png) no-repeat;
   background-position: center;
   background-size: contain;
-  height: 300px;
+  height: 600px;
   position: absolute;
   width: 50%;
   z-index: 0;
@@ -50,12 +50,12 @@
 }
 
 .home .home-content {
-  max-width: 35rem;
+  max-width: 100rem;
   width: 40%;
 }
 
 .home-content h3 {
-  font-size: 3rem;
+  font-size: 6rem;
   margin-bottom: 0.3rem;
   font-weight: 700;
   line-height: 0.3;
@@ -63,27 +63,28 @@
 }
 
 .home-content h1 {
-  font-size: 4rem;
+  font-size: 7rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
   font-family: var(--title1);
 }
 
 .home-content p {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
+  text-align: justify;
 }
 
 .home-content .social-media a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   background: transparent;
   border: 0.2rem solid var(--text-color);
   border-radius: 50%;
   box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--text-color);
   margin: 2.5rem 1.5rem 3rem 0;
   transition: 0.5s ease;
@@ -100,7 +101,7 @@
   background: var(--text-color);
   border-radius: 0.6rem;
   box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   color: var(--white-color);
   letter-spacing: 0.1rem;
   font-weight: 600;
@@ -220,9 +221,9 @@
 .home-img img {
   position: absolute;
   bottom: 0;
-  right: 30px;
+  right: 0rem;
   pointer-events: none;
-  max-width: 480px;
+  max-width: 680px;
   max-height: 100vh;
 }
 

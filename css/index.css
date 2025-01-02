@@ -24,7 +24,7 @@
   background: url(../images/bg-orbit2.png) no-repeat;
   background-position: center;
   background-size: contain;
-  height: 300px;
+  height: 600px;
   position: absolute;
   width: 50%;
   z-index: 0;
@@ -339,11 +339,11 @@ left: 8.5rem ;
 }
 
 .about-content h3 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .about-content p {
-  font-size: 1.6rem;
+  font-size: 2.3rem;
   margin: 2rem 0.3rem;
 }
 
@@ -353,7 +353,7 @@ left: 8.5rem ;
   background: var(--bg-color);
   border-radius: 0.6rem;
   box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   color: var(--white-color);
   letter-spacing: 0.1rem;
   font-weight: 600;
@@ -439,12 +439,12 @@ left: 8.5rem ;
 }
 
 .services-box i {
-  font-size: 5rem;
+  font-size: 6rem;
   color: var(--text-color);
 }
 
 .services-box h3 {
-  font-size: 2.3rem;
+  font-size: 3.3rem;
   transition: 0.5s ease;
 }
 
@@ -453,7 +453,7 @@ left: 8.5rem ;
 }
 
 .services-box p {
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   margin: 1rem 0 3rem;
 }
 
@@ -541,27 +541,28 @@ left: 8.5rem ;
 }
 
 .portfolio-layer h4 {
-  font-size: 2.5rem;
+  font-size: 3.7rem;
   font-family: var(--nav-a);
 }
 
 .portfolio-layer p {
-  font-size: 1rem;
+  font-size: 2rem;
   margin: 0.3 0 1rem;
+  margin-bottom: 2rem;
 }
 
 .portfolio-layer a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   background: var(--white-color);
   border-radius: 50%;
 }
 
 .portfolio-layer a i {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: var(--text-color);
 }
 

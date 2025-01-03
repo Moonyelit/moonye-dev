@@ -227,17 +227,6 @@
   max-height: 100vh;
 }
 
-/* Ajoutez les classes pour les étoiles et la comète */
-.stars, .stars2, .stars3, .comet {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-}
-
 /* ABOUT  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -572,7 +561,23 @@ left: 8.5rem ;
 ************************************************************************************************************************************************* */
 @media (max-width: 1200px) {
   html {
-    font-size: 55%;
+    font-size: 40%;
+  }
+  
+  .orbit {
+    height: 300px;
+  }
+  
+  .dark-mode .orbit {
+    height: 300px;
+  }
+
+  .home-content h3 {
+    font-size: 5rem;
+  }
+
+  .home-content h1 {
+    font-size: 6rem;
   }
 
   .home .profession-container .profession-box {
@@ -638,6 +643,14 @@ left: 8.5rem ;
     max-width: 50rem;
   }
 
+  .home-content h3 {
+    font-size: 3.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 5.5rem;
+  }
+
   .home .profession-container .profession-box {
     right: -35%;
   }
@@ -647,7 +660,7 @@ left: 8.5rem ;
   }
 
   .home-img img {
-    right: -4.5%;
+    right: -8.5%;
   }
 
   .services {
@@ -702,78 +715,7 @@ left: 8.5rem ;
 }
 
 @media (max-width: 768px) {
-  #menu-icon {
-    display: block;
-    color: var(--white-color);
-  }
-
-  #darkMode-icon {
-    position: absolute;
-    right: 10rem;
-    font-size: 2.6rem;
-    color: var(--white-color);
-    margin-bottom: 0.1rem;
-  }
-
-  .header {
-    background: var(--text-color);
-  }
-
-  .dark-mode .header {
-    background: var(--hover-color2);
-  }
-
-  .logo {
-    color: var(--white-color);
-  }
-
-  .header.sticky #menu-icon {
-    display: block;
-    color: var(--white-color);
-  }
-
-  .header.sticky .icons {
-    display: flex;
-    align-items: center;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 3%;
-    background: var(--bg-color);
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  .navbar.active {
-    display: block;
-    background-color: var(--text-color);
-  }
-
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-    color: var(--bg-color);
-  }
-
-  .navbar a:nth-child(1),
-  .navbar a:nth-child(2) {
-    color: var(--bg-color);
-  }
-
-  .navbar a.active {
-    color: var(--main-color);
-  }
-
-  .navbar a::before {
-    display: none;
-  }
-
+  
   /* HOME  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */

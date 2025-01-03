@@ -38,12 +38,24 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-/*========== dark light mode ==========*/
-let darkModeIcon = document.querySelector("#darkMode-icon");
+/*========== dark ou light mode enclenché et qui reste en fonction du choix  ==========*/
 
-darkModeIcon.onclick = () => {
-  darkModeIcon.classList.toggle("bx-sun");
+const darkModeIcon = document.querySelector("#darkMode-icon");
+
+if(localStorage.getItem("theme") === "dark"){
+  document.body.classList.add("dark-mode");
+  darkModeIcon.classList.add("bx-sun");
+}
+
+darkModeIcon.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
-};
+  darkModeIcon.classList.toggle("bx-sun");
 
+  if(document.body.classList.contains("dark-mode")){
+    localStorage.setItem("theme", "dark");
+  }else{
+    localStorage.setItem("theme", "light");
+  }
+
+});
 

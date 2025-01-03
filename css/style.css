@@ -117,6 +117,7 @@
   --hover-color2: var(--text-color);
 }
 
+
 /* BODY STYLE ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -129,12 +130,23 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   overflow-x: hidden;
-  position: relative; 
+  position: relative;
 }
 
 main {
-  position: relative; 
-  z-index: 1; 
+  position: relative;
+  z-index: 1;
+}
+
+/* Ajoutez les classes pour les étoiles et la comète */
+.stars, .stars2, .stars3, .comet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 /* SECTION ******************************************************************************************************************************************
@@ -145,7 +157,7 @@ section {
   min-height: 100vh;
   padding: 10rem 7% 2rem;
   z-index: 1;
-  position: relative; 
+  position: relative;
 }
 
 /* HEADER ******************************************************************************************************************************************
@@ -153,98 +165,169 @@ section {
 ************************************************************************************************************************************************* */
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 5%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    z-index: 100;
-    transition: 0.5s;
-  }
-  
-  .header.sticky {
-    background: var(--text-color);
-    box-shadow: 0 0.1rem 1rem var(--shadow-color);
-    padding: 1rem 7%;
-  }
-  
-  .logo {
-    font-size: 3.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-    font-family: var(--title1);
-    cursor: default;
-    margin-right: auto;
-  }
-  
-  .navbar a {
-    position: relative;
-    font-size: 1.8rem;
-    color: var(--white-color);
-    font-weight: 500;
-    font-family: var(--nav-a);
-    margin-right: 3.5rem;
-  }
-  
-  .header.sticky .navbar a.active {
-    color: var(--bg-color);
-  }
-  
-  .header.sticky.navbar a {
-    color: var(--white-color);
-  }
-  
-  .header.sticky .logo {
-    color: var(--white-color);
-  }
-  
-  .header.sticky .navbar a.active {
-    color: var(--bg-color);
-  }
-  
-  .navbar a.active::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 0.2rem;
-    background: var(--white-color);
-  }
-  
-  .header.sticky .navbar a::before {
-    background: var(--bg-color);
-    opacity: 0.7;
-  }
-  
-  #darkMode-icon {
-    font-size: 3rem;
-    color: var(--white-color);
-    cursor: pointer;
-  }
-  
-  .header.sticky #darkMode-icon {
-    color: var(--white-color);
-    opacity: 0.9;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 5%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+.header.sticky {
+  background: var(--text-color);
+  box-shadow: 0 0.1rem 1rem var(--shadow-color);
+  padding: 1rem 7%;
+}
+
+.logo {
+  font-size: 3.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  font-family: var(--title1);
+  cursor: default;
+  margin-right: auto;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 1.8rem;
+  color: var(--white-color);
+  font-weight: 500;
+  font-family: var(--nav-a);
+  margin-right: 3.5rem;
+}
+
+.header.sticky .navbar a.active {
+  color: var(--bg-color);
+}
+
+.header.sticky.navbar a {
+  color: var(--white-color);
+}
+
+.header.sticky .logo {
+  color: var(--white-color);
+}
+
+.header.sticky .navbar a.active {
+  color: var(--bg-color);
+}
+
+.navbar a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 0.2rem;
+  background: var(--white-color);
+}
+
+.header.sticky .navbar a::before {
+  background: var(--bg-color);
+  opacity: 0.7;
+}
+
+#darkMode-icon {
+  font-size: 3rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.header.sticky #darkMode-icon {
+  color: var(--white-color);
+  opacity: 0.9;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+
+.icons {
+  display: flex;
+}
+
+@media (max-width: 768px) {
   #menu-icon {
-    font-size: 3.6rem;
-    color: var(--text-color);
+    display: block;
+    color: var(--white-color);
+    margin-left: 2rem;
+  }
+
+  .header {
+    background: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .dark-mode .header {
+    background: var(--text-color2);
+  }
+
+
+  .logo {
+    color: var(--white-color);
+  }
+
+  .header.sticky .icons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--text-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     display: none;
   }
-  
-  .icons {
-    display: flex;
-    gap: 1rem; 
+
+  .navbar.active {
+    display: block;
+  }
+
+  .dark-mode .navbar.active {
+    background: var(--text-color2);
   }
   
 
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--bg-color);
+  }
 
+  .navbar a:nth-child(1),
+  .navbar a:nth-child(2) {
+    color: var(--bg-color);
+  }
 
+.navbar .active {
+    color: var(--text-color2);
+  }
+
+  .navbar a::before {
+    display: none;
+  }
+
+  .dark-mode .navbar a {
+    color: var(--white-color);
+  }
+  
+  .dark-mode .navbar a.active {
+    color: var(--bg-color);
+  }
+  
 
 
 /* FOOTER  ******************************************************************************************************************************************
@@ -252,165 +335,183 @@ section {
 ************************************************************************************************************************************************* */
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 7%;
-    background: var(--text-color);
-    position: relative; /* Ajoutez cette ligne */
-    bottom: 0; /* Ajoutez cette ligne */
-    width: 100%; /* Ajoutez cette ligne */
-  }
-  
-  .footer-text p {
-    font-size: 1.6rem;
-    color: var(--white-color);
-    font-family: var(--nav-a);
-  }
-  
-  .footer-iconTop a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8rem;
-    background: var(--main-color);
-    border-radius: 0.8rem;
-    border: 0.2rem solid var(--hover-color2);
-    outline: 0.2rem solid transparent;
-    transition: 0.5s ease;  
-  }
-  
-  .footer-iconTop a:hover {
-    outline-color: var(--bg-color);
-  
-  }
-  
-  .footer-iconTop a i {
-    font-size: 2.4rem;
-    color: var(--text-color);
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 7%;
+  background: var(--text-color);
+  position: relative; /* Ajoutez cette ligne */
+  bottom: 0; /* Ajoutez cette ligne */
+  width: 100%; /* Ajoutez cette ligne */
+}
 
+.footer-text p {
+  font-size: 1.6rem;
+  color: var(--white-color);
+  font-family: var(--nav-a);
+}
+
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border-radius: 0.8rem;
+  border: 0.2rem solid var(--hover-color2);
+  outline: 0.2rem solid transparent;
+  transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+  outline-color: var(--bg-color);
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--text-color);
+}
 
 /* CONTACT  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
 
-
 .orbit-2 {
-    top: 10rem;
-    left: -28rem;
-  }
-  
+  top: 10rem;
+  left: -28rem;
+}
+
+.orbit2 {
+  background: url(../images/bg-orbit.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 600px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  animation: rotation2 120s infinite linear;
+  opacity: 0.45;
+}
+
+.dark-mode .orbit2 {
+  background: url(../images/bg-orbit2.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 600px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  animation: rotation2 120s infinite linear;
+  opacity: 0.45;
+}
+
+.balance-1 {
+  top: 15rem;
+  right: -28rem;
+}
+
+.balance {
+  background: url(../images/bg-globe.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  opacity: 0.45;
+}
+
+.dark-mode .balance {
+  background: url(../images/bg-globe2.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 500px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  opacity: 0.45;
+}
+
+.contact {
+  position: relative;
+  z-index: 1;
+  margin-top: 5rem;
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--main-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+  box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
   .orbit2 {
-    background: url(../images/bg-orbit.png) no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 600px;
-    position: absolute;
-    width: 50%;
-    z-index: 0;
-    mix-blend-mode: darken;
-    animation: rotation2 120s infinite linear;
-    opacity: 0.45;
+    height: 350px;
   }
-  
+
   .dark-mode .orbit2 {
-    background: url(../images/bg-orbit2.png) no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 600px;
-    position: absolute;
-    width: 50%;
-    z-index: 0;
-    mix-blend-mode: darken;
-    animation: rotation2 120s infinite linear;
-    opacity: 0.45;
+    height: 400px;
   }
-  
-  
-  .balance-1 {
-    top: 15rem;
-    right: -28rem;
-  }
-  
-  .balance {
-    background: url(../images/bg-globe.png) no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 500px;
-    position: absolute;
-    width: 50%;
-    z-index: 0;
-    mix-blend-mode: darken;
-    opacity: 0.45;
-  }
-  
-  .dark-mode .balance {
-    background: url(../images/bg-globe2.png) no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 500px;
-    position: absolute;
-    width: 50%;
-    z-index: 0;
-    mix-blend-mode: darken;
-    opacity: 0.45;
-  }
-  
+}
 
-  .contact {
-    position: relative; 
-    z-index: 1; 
-    margin-top: 5rem;
-    
-  }
-  
-  .contact h2 {
-    margin-bottom: 3rem;
-  }
-  
-  .contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .contact form .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .contact form .input-box input,
-  .contact form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--main-color);
-    border-radius: 0.8rem;
-    margin: 0.7rem 0;
-    box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
-  }
-  
+.balance {
+  background: url(../images/bg-globe.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  position: absolute;
+  width: 50%;
+  z-index: 0;
+  mix-blend-mode: darken;
+  opacity: 0.45;
+}
+
+.dark-mode .balance {
+  height: 300px;
+}
+
+@media (max-width: 450px) {
   .contact form .input-box input {
-    width: 49%;
+    width: 100%;
   }
-  
-  .contact form textarea {
-    resize: none;
-  }
-  
-  .contact form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
-  }
-
-  @media (max-width: 450px) {
-    .contact form .input-box input {
-        width: 100%;
-      }
-    }
-
+}

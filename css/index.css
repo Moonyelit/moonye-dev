@@ -107,6 +107,7 @@
   font-weight: 600;
   border: 0.2rem solid transparent;
   transition: 0.5s ease;
+  z-index: 3;
 }
 
 .btn:hover {
@@ -177,6 +178,7 @@
   padding: 13px 0;
   min-width: 200px;
   text-align: center;
+  z-index: 0;
 }
 
 .home .profession-box .profession:nth-child(1) i {
@@ -455,6 +457,7 @@ left: 8.5rem ;
   padding-bottom: 10rem;
   position: relative; 
   background: var(--text-color);
+  z-index: 1;
 }
 
 .dark-mode .portfolio {
@@ -734,6 +737,7 @@ left: 8.5rem ;
     padding-top: 10rem;
   }
 
+
   .home-content h3 {
     font-size: 2.6rem;
     margin-bottom: 2rem;
@@ -741,7 +745,14 @@ left: 8.5rem ;
 
   .home-content h1 {
     font-size: 5rem;
+    margin-bottom: 1rem;
     line-height: 3.5rem;
+  }
+
+.home-content p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 
   .home-content .social-media a {
@@ -765,10 +776,11 @@ left: 8.5rem ;
     padding: 0 13px;
     left: auto;
     transform-origin: 0;
+    z-index: 0;
   }
 
   .home .profession-box .profession:nth-child(1) {
-    transform: rotate(-90deg) translate(-115px, -210px);
+    transform: rotate(-90deg) translate(-115px, -230px);
   }
 
   .home .profession-box .profession:nth-child(1) i {
@@ -794,9 +806,13 @@ left: 8.5rem ;
     z-index: -1;
   }
 
+  .home .social-media {
+    margin : 0;
+  }
+
   .home .profession-container .overlay {
     position: fixed;
-    top: 70rem;
+    top: 75rem;
     left: 50%;
     right: 0;
     transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
@@ -957,6 +973,39 @@ left: 8.5rem ;
   .home .profession-container .overlay {
     top: 80rem;
   }
+
+  .home .btn {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+.about h2{
+    font-size: 2.5rem;
+  }
+
+  .about h3 {
+    font-size: 2rem;
+  }
+  .about p{
+    font-size: 1.5rem;
+  }
+
+  .about .btn2{
+    font-size: 2rem;
+  }
+
+.services h2 {
+    font-size: 3rem;
+  }
+
+  .services-box i {
+    font-size: 4rem;
+  }
+
+.services-box h3 {
+    font-size: 2.5rem;
+  }
+
 
   .portfolio .portfolio-container {
     grid-template-columns: 1fr;

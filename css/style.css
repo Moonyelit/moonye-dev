@@ -147,6 +147,7 @@ main {
   height: 100%;
   overflow: hidden;
   pointer-events: none;
+  z-index: -1;
 }
 
 /* SECTION ******************************************************************************************************************************************
@@ -272,6 +273,7 @@ section {
 
   .logo {
     color: var(--white-color);
+    font-size: 3rem;
   }
 
   .header.sticky .icons {
@@ -328,7 +330,7 @@ section {
     color: var(--bg-color);
   }
   
-
+}
 
 /* FOOTER  ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
@@ -341,9 +343,10 @@ section {
   flex-wrap: wrap;
   padding: 2rem 7%;
   background: var(--text-color);
-  position: relative; /* Ajoutez cette ligne */
-  bottom: 0; /* Ajoutez cette ligne */
-  width: 100%; /* Ajoutez cette ligne */
+  position: relative; 
+  bottom: 0; 
+  width: 100%; 
+  z-index: 1;
 }
 
 .footer-text p {
@@ -466,7 +469,6 @@ section {
   padding: 1.5rem;
   font-size: 1.6rem;
   color: var(--text-color);
-  background: var(--main-color);
   border-radius: 0.8rem;
   margin: 0.7rem 0;
   box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
@@ -484,6 +486,7 @@ section {
   margin-top: 2rem;
   cursor: pointer;
 }
+
 @media (max-width: 1200px) {
   .orbit2 {
     height: 350px;
@@ -514,4 +517,12 @@ section {
   .contact form .input-box input {
     width: 100%;
   }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+
+
+
 }

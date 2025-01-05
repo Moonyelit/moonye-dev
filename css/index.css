@@ -1,3 +1,32 @@
+/* DEV TOOL A SUPP  */
+
+body:before {
+  content: "Media Query Active: Large Screen";
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  z-index: 9999;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  body:before {
+    content: "Media Query Active: Mobile Screen";
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  body:before {
+    content: "Media Query Active: Tablet Screen";
+  }
+}
+
+
+/* OK : */
+
 @media (max-width: 1999px) {
   /* HOME Section */
   

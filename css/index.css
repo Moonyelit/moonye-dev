@@ -26,6 +26,72 @@ body:before {
 
 
 /* OK : */
+/* LOADER  */
+
+#loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.water {
+  width: 100px;
+  height: 100px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0 0 10px 0 var(--shadow-color), 0 2px 5px 0 var(--shadow-color);
+  overflow: hidden;
+}
+
+.water:before, .water:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  background-color: var(--white-color);
+}
+
+.water:before {
+  border-radius: 45%;
+  background: rgba(251, 241, 225, 0.7);
+  animation: wave 5s linear infinite;
+}
+
+.water:after {
+  border-radius: 35%;
+  background: rgba(251, 241, 225, 0.3);
+  animation: wave 5s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 
 @media (max-width: 1999px) {
   /* HOME Section */

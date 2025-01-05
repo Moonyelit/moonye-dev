@@ -71,10 +71,13 @@
   z-index: 1;
   padding: 3rem 7%;
   opacity: 1;
-  background-color: var(--main-color);
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 5rem;
+  box-shadow: 0 4px 6px var(--glass-shadow);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  border-radius: 2rem;
-  box-shadow: 0 0.5rem 1rem var(--shadow-color);
   margin: 2rem auto;
   max-width: 60%;
   max-height: 70vh;
@@ -268,31 +271,6 @@
 
 .server .skillbar-bar {
   background: var(--hover-color2);
-}
-
-ul {
-  background: var(--text-color);
-  color: var(--white-color);
-  padding: 4rem;
-  border-radius: 5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  font-size: 1.5rem;
-}
-
-.dark-mode ul {
-  background: var(--bg-color);
-  color: var(--font-title);
-}
-
-ul h4 {
-  font-size: 3rem;
-  margin-bottom: 0rem;
-  color: var(--white-color);
-  font-family: var(--title1);
-}
-
-ul li {
-  margin-bottom: 2rem;
 }
 
 /* CONTACT  ******************************************************************************************************************************************

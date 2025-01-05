@@ -6,8 +6,8 @@ ScrollReveal({
   delay: 200,
 });
 
-ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
-ScrollReveal().reveal(".contact form", { origin: "bottom" });
+ScrollReveal().reveal(".heading", { origin: "top" });
+ScrollReveal().reveal(".contact form , .about-text", { origin: "bottom" });
 ScrollReveal().reveal(".contact p, .skills", { origin: "left" });
 ScrollReveal().reveal(".liste, .home-content p, .about-content", {
   origin: "right",

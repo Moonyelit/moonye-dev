@@ -9,7 +9,8 @@
     <title>FOUGEROUSE Élodie | Web Developer in France</title>
 
     <meta name="description" content="FOUGEROUSE Élodie — Web Developer Junior in France | Portfolio.">
-    <meta name="keywords" content="Web Developer, France, Élodie Fougerouse, Développeur Web, Portfolio, HTML, CSS, JavaScript, Front-end, UI/UX">
+    <meta name="keywords"
+        content="Web Developer, France, Élodie Fougerouse, Développeur Web, Portfolio, HTML, CSS, JavaScript, Front-end, UI/UX">
     <meta property="og:title" content="FOUGEROUSE Élodie | Web Developer in France | Portfolio">
     <meta property="og:description" content="FOUGEROUSE Élodie — Web Developer Junior in France.">
     <meta property="og:image" content="URL_de_votre_image">
@@ -27,8 +28,11 @@
     <link href="../css/about-me.css" rel="stylesheet" type="text/css">
 
 
+    <!-- CODE COMPLEXE SCSS -->
     <link href="../css/background/background.css" rel="stylesheet" type="text/css">
+    <link href="../css/skills-scss/skills.css" rel="stylesheet" type="text/css">
 
+    <!-- JAVASCRIPT -->
     <script defer src="../js/script.js"></script>
     <script defer src="../js/about-me.js"></script>
 
@@ -77,11 +81,12 @@
     <main class="sky">
         <!-- About Me Section -->
         <section class="about-me" id="about-me">
-           <article class="about-text"> 
-            
-            <h2>À propos <span>de moi</span></h2>
-            
-                <p>Passionnée par l’informatique et le design, je suis en reconversion pour devenir développeuse web spécilisée dans le
+            <article class="about-text">
+
+                <h2 class="heading">À propos <span>de moi</span></h2>
+
+                <p>Passionnée par l’informatique et le design, je suis en reconversion pour devenir développeuse web
+                    spécilisée dans le
                     front-end. Mon parcours atypique, mêlant une licence en arts plastiques et un master en arts
                     numériques, reflète une quête constante de créativité et de sens.</p>
 
@@ -107,57 +112,124 @@
                 <!-- Barres de compétences -->
                 <div class="skills">
                     <h3>Langages</h3>
-
                     <div class="skillbar-wrapper">
                         <div class="skillbar clearfix html5" data-percent="100%">
                             <h4 class="skillbar-title"><span>HTML5</span></h4>
                             <div class="skillbar-bar"></div>
                             <div class="skill-bar-percent">100%</div>
                         </div>
-
                         <div class="skillbar clearfix css" data-percent="95%">
                             <h4 class="skillbar-title"><span>CSS</span></h4>
                             <div class="skillbar-bar"></div>
                             <div class="skill-bar-percent">95%</div>
                         </div>
-
                         <div class="skillbar clearfix javascript" data-percent="80%">
                             <h4 class="skillbar-title"><span>JavaScript</span></h4>
                             <div class="skillbar-bar"></div>
                             <div class="skill-bar-percent">80%</div>
                         </div>
-
                         <div class="skillbar clearfix php" data-percent="70%">
                             <h4 class="skillbar-title"><span>PHP</span></h4>
                             <div class="skillbar-bar"></div>
                             <div class="skill-bar-percent">70%</div>
                         </div>
-
                         <div class="skillbar clearfix server" data-percent="60%">
                             <h4 class="skillbar-title"><span>Server</span></h4>
                             <div class="skillbar-bar"></div>
                             <div class="skill-bar-percent">60%</div>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Liste des frameworks et outils -->
-                <ul class="liste">
-                    <li>
-                        <h4>Frameworks :</h4> Tailwind, Synfony
-                    </li>
-                    <li>
-                        <h4>CMS :</h4> Prestashop
-                    </li>
-                    <li>
-                        <h4>Logiciel :</h4> Figma, Photoshop, Git, Illustrator, Clip Studio Paint etc.
-                    </li>
-                    <li>
-                        <h4>Qualités :</h4> Créativité, Rigoureuse, Perseverante
-                    </li>
-                </ul>
+                <div class="skill-grid">
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Framework</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Symfony</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Framework</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Prestashop</span>
+                        </div>
+                        <div class="box-back">
+                            <span>CMS</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Figma</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Logiciel</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Photoshop</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Logiciel</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Git</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Logiciel</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Illustrator</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Logiciel</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Clip Studio Paint</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Logiciel</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Electron</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Framework</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="box-front">
+                            <span>Vue Native</span>
+                        </div>
+                        <div class="box-back">
+                            <span>Framework</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+        </section>
+
+
+        </div>
         </section>
 
         <!-- CONTACT SECTION DESIGN -->

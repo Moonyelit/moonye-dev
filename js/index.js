@@ -15,3 +15,12 @@ ScrollReveal({
   ScrollReveal().reveal(".home-content h3, .home-content p, .about-content", {
     origin: "right",
   });
+
+
+  /*========== masquer le chargement une fois que c'est fini  ==========*/
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('loader').classList.add('hidden');
+    }, 1000);
+  });
+

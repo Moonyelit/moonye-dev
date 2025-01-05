@@ -117,7 +117,6 @@
   --hover-color2: var(--text-color);
 }
 
-
 /* BODY STYLE ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -139,7 +138,10 @@ main {
 }
 
 /* Ajoutez les classes pour les étoiles et la comète */
-.stars, .stars2, .stars3, .comet {
+.stars,
+.stars2,
+.stars3,
+.comet {
   position: absolute;
   top: 0;
   left: 0;
@@ -147,7 +149,7 @@ main {
   height: 100%;
   overflow: hidden;
   pointer-events: none;
-  z-index: -1;
+  z-index: -1; 
 }
 
 /* SECTION ******************************************************************************************************************************************
@@ -157,8 +159,8 @@ main {
 section {
   min-height: 100vh;
   padding: 10rem 7% 2rem;
-  z-index: 1;
   position: relative;
+  z-index: 1; 
 }
 
 /* HEADER ******************************************************************************************************************************************
@@ -270,7 +272,6 @@ section {
     background: var(--text-color2);
   }
 
-
   .logo {
     color: var(--white-color);
     font-size: 3rem;
@@ -300,7 +301,6 @@ section {
   .dark-mode .navbar.active {
     background: var(--text-color2);
   }
-  
 
   .navbar a {
     display: block;
@@ -314,7 +314,7 @@ section {
     color: var(--bg-color);
   }
 
-.navbar .active {
+  .navbar .active {
     color: var(--text-color2);
   }
 
@@ -325,11 +325,10 @@ section {
   .dark-mode .navbar a {
     color: var(--white-color);
   }
-  
+
   .dark-mode .navbar a.active {
     color: var(--bg-color);
   }
-  
 }
 
 /* FOOTER  ******************************************************************************************************************************************
@@ -343,9 +342,9 @@ section {
   flex-wrap: wrap;
   padding: 2rem 7%;
   background: var(--text-color);
-  position: relative; 
-  bottom: 0; 
-  width: 100%; 
+  position: relative;
+  bottom: 0;
+  width: 100%;
   z-index: 1;
 }
 
@@ -444,6 +443,7 @@ section {
   position: relative;
   z-index: 1;
   margin-top: 5rem;
+  justify-content: center;
 }
 
 .contact h2 {
@@ -487,6 +487,39 @@ section {
   cursor: pointer;
 }
 
+@media (min-width: 2000px) {
+  .orbit2 {
+    height: 900px;
+  }
+
+  .dark-mode .orbit2 {
+    background: url(../../images/bg-orbit2.png) no-repeat;
+  }
+
+  .balance {
+    height: 800px;
+  }
+
+  .contact h2 {
+    font-size: 8rem;
+  }
+
+  .contact {
+      justify-content: space-between;
+    }
+
+  .contact form {
+    max-width: 120rem;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    padding: 3rem;
+    font-size: 2.2rem;
+  }
+
+}
+
 @media (max-width: 1200px) {
   .orbit2 {
     height: 350px;
@@ -498,19 +531,11 @@ section {
 }
 
 .balance {
-  background: url(../images/bg-globe.png) no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 300px;
-  position: absolute;
-  width: 50%;
-  z-index: 0;
-  mix-blend-mode: darken;
-  opacity: 0.45;
+  height: 600px;
 }
 
 .dark-mode .balance {
-  height: 300px;
+  height: 600px;
 }
 
 @media (max-width: 450px) {
@@ -521,8 +546,4 @@ section {
   .logo {
     font-size: 2.5rem;
   }
-
-
-
-
 }

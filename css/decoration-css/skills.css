@@ -3,31 +3,25 @@
   justify-content: center;
   padding-left: 75px;
 }
-
 .wall {
   display: flex;
 }
-
 .v-boxes {
   display: flex;
   flex-direction: column;
+  &:not(:first-child) {
+    margin-left: -75px;
+  }
 }
-.v-boxes:not(:first-child) {
-  margin-left: -75px;
-}
-
 .second {
   margin-top: 75px;
 }
-
 .third {
   margin-top: 150px;
 }
-
 .forth {
   margin-top: 225px;
 }
-
 .box {
   width: 100px;
   height: 100px;
@@ -37,36 +31,43 @@
   transform: rotate(45deg);
   margin: 25px;
   cursor: pointer;
-}
-.box:hover:not(.link) > .box-face, .box:hover > .box-back {
-  transform: translateZ(100px) rotateX(180deg);
-  background-color: var(--hover-color2) !important;
-}
-.box:hover:not(.link) > .box-face > .box-text {
-  opacity: 0;
-}
-.box:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
-.box:hover.link > .box-face {
-  background-color: transparent !important;
-}
-.box:hover.link > .box-face > .box-text {
-  color: var(--white-color);
-}
-.box.link > .box-face {
-  background-color: var(--text-color);
-  border: 1px solid var(--text-color);
-  box-sizing: border-box;
-  transition: background-color 0.5s;
-}
-.box.link .box-text {
-  color: var(--white-color);
-  transition: color 0.5s;
+  &:hover {
+    &:not(.link) > .box-face,
+    > .box-back {
+      transform: translateZ(100px) rotateX(180deg);
+      background-color: transparent !important;
+    }
+    &:not(.link) > .box-face > .box-text {
+      opacity: 0;
+    }
+    & .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+    &.link > .box-face {
+      background-color: var(--text-color);
+      & > .box-text {
+        color: var(--white-color);
+      }
+    }
+  }
+
+  &.link {
+    & > .box-face {
+      background-color: white;
+      border: 1px solid var(--text-color);
+      box-sizing: border-box;
+      transition: background-color 0.5s;
+    }
+    & .box-text {
+      color: var(--text-color);
+      transition: color 0.5s;
+    }
+  }
 }
 
-.box-face, .box-back {
+.box-face,
+.box-back {
   position: absolute;
   top: 0;
   z-index: 1;
@@ -77,9 +78,9 @@
   -ms-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
+  transform-style: preserver-3d;
+  -webkit-transform-style: preserver-3d;
+  -moz-transform-style: preserver-3d;
   transition: transform 1s, background-color 0s 0.3s;
 }
 
@@ -109,7 +110,7 @@
 
 .box-back {
   z-index: 0;
-  background-color: var(--hover-color2);
+  background-image: linear-gradient(var(--hover-color2), var(--text-color));
 }
 
 .box-text img {
@@ -130,7 +131,7 @@
   font-size: 13px;
   color: var(--white-color);
   text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
   padding: 5px 0;
   z-index: 1000;
   -webkit-transform: rotate(-45deg);
@@ -151,5 +152,3 @@
   border-right: 5px solid transparent;
   border-bottom: 5px solid var(--white-color);
 }
-
-/*# sourceMappingURL=skills.css.map */

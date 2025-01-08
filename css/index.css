@@ -28,6 +28,8 @@ body:before {
 /* OK : */
 /* LOADER  */
 
+/* LOADER  */
+
 #loader {
   position: fixed;
   left: 0;
@@ -89,8 +91,6 @@ body:before {
     transform: rotate(360deg);
   }
 }
-
-
 
 
 @media (max-width: 1999px) {

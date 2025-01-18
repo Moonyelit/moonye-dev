@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die('Veuillez valider le reCAPTCHA.');
     }
 
-    $secretKey = '6LeQ0rsqAAAAAGIvKU2SlHK8fFJaRi-i-QDshAPI';
+    $secretKey = '6LfI8LsqAAAAAD6Wx-jchHmmWoQk5SqcF33FscRG';
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha");
     $responseKeys = json_decode($response, true);
 

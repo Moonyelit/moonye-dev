@@ -4,398 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FOUGEROUSE Élodie | Web Developer in France</title>
 
+    <!-- META TAGS -->
     <meta name="description" content="FOUGEROUSE Élodie — Web Developer Junior in France | Portfolio.">
     <meta name="keywords"
         content="Web Developer, France, Élodie Fougerouse, Développeur Web, Portfolio, HTML, CSS, JavaScript, Front-end, UI/UX">
     <meta property="og:title" content="FOUGEROUSE Élodie | Web Developer in France | Portfolio">
     <meta property="og:description" content="FOUGEROUSE Élodie — Web Developer Junior in France.">
-    <meta property="og:image" content="URL_de_votre_image">
-    <meta property="og:url" content="URL_de_votre_site">
 
-    <meta name="author" content="FOUGEROUSE Élodie">
-    <meta name="designer" content="FOUGEROUSE Élodie">
-
-    <link rel="preload" href="https://use.typekit.net/ean4ozv.css" as="style">
-    <link rel="stylesheet" href="https://use.typekit.net/ean4ozv.css">
-
-    <!-- CUSTOM CSS et JAVASCRIPT-->
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <link href="../css/index.css" rel="stylesheet" type="text/css">
-    <link href="../css/about-me.css" rel="stylesheet" type="text/css">
-
-
-    <!-- CODE COMPLEXE SCSS -->
-    <link href="../css/background/background.css" rel="stylesheet" type="text/css">
-    <link href="../css/decoration-css/skills.css" rel="stylesheet" type="text/css">
-    <link href="../css/decoration-css/box.css" rel="stylesheet" type="text/css">
-
-    <!-- JAVASCRIPT -->
-    <script defer src="../js/script.js"></script>
-    <script defer src="../js/about-me.js"></script>
-
-
-    <!-- BOX ICONS  -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- STYLES & FONTS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/about-me.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
-
-    <!-- RAJOUTER UNE IMAGE ICI -->
-    <link rel="icon" type="image/png" href="" sizes="32x32">
-    <link rel="icon" type="image/png" href="" sizes="16x16">
-
-
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBDDWWE856"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-CBDDWWE856');
-    </script>
-
-    <!-- SCROLL REVEAL -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
+    <!-- GOOGLE reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
-    <!-- HEADER -->
     <header class="header">
-        <a href="index.html" class="logo">Moonye.</a>
+        <a href="#" class="logo">Moonye.</a>
         <nav class="navbar">
-            <a href="../index.html#home">HOME</a>
-            <a href="#about-me">À PROPOS DE MOI</a>
-            <a href="#evolution-skillbar">COMPÉTENCES</a>
-            <a href="#contact">CONTACT</a>
+            <a href="#home">Home</a>
+            <a href="#about-me">À propos de moi</a>
+            <a href="#evolution-skillbar">Compétences</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <div class="icons">
-            <div class="bx bx-moon" id="darkMode-icon"></div>
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </div>
     </header>
 
-    <!-- MAIN -->
-    <main class="sky">
-        <!-- About Me Section -->
-        <section class="about-me" id="about-me">
-            <article class="about-text">
-
-                <h2 class="heading">À propos <span>de moi</span></h2>
-
-                <p>Passionnée par l’informatique et le design, je suis en reconversion pour devenir développeuse web
-                    spécilisée dans le
-                    front-end. Mon parcours atypique, mêlant une licence en arts plastiques et un master en arts
-                    numériques, reflète une quête constante de créativité et de sens.</p>
-
-                <p>Après plusieurs années en tant qu’assistante dentaire, où la créativité me manquait, j’ai décidé de
-                    me réorienter vers un domaine où je pouvais allier logique et imagination : le développement web. Ce
-                    métier me permet de concevoir des interfaces modernes et intuitives, répondant aux besoins des
-                    utilisateurs.</p>
-
-                <p>Actuellement en formation au Garage 404, je recherche un stage non rémunéré de deux mois, du 24 avril
-                    au 7 juillet 2025, pour enrichir mes compétences techniques et m’épanouir dans ce domaine
-                    passionnant.</p>
-
-                <p>Serviable, motivée et rigoureuse, je suis convaincue que mon parcours et ma polyvalence seront des
-                    atouts pour une équipe dynamique et innovante.</p>
-            </article>
-
-        </section>
-
-        <!-- Skills Section -->
-        <section id="evolution-skillbar">
-            <h2 class="heading">Mes <span>compétences</span></h2>
-            <div class="skills-container">
-                <!-- Barres de compétences -->
-                <div class="skills">
-                    <h3>Langages</h3>
-                    <div class="skillbar-wrapper">
-                        <div class="skillbar clearfix html5" data-percent="100%">
-                            <h4 class="skillbar-title"><span>HTML5</span></h4>
-                            <div class="skillbar-bar"></div>
-                            <div class="skill-bar-percent">100%</div>
-                        </div>
-                        <div class="skillbar clearfix css" data-percent="95%">
-                            <h4 class="skillbar-title"><span>CSS</span></h4>
-                            <div class="skillbar-bar"></div>
-                            <div class="skill-bar-percent">95%</div>
-                        </div>
-                        <div class="skillbar clearfix javascript" data-percent="80%">
-                            <h4 class="skillbar-title"><span>JavaScript</span></h4>
-                            <div class="skillbar-bar"></div>
-                            <div class="skill-bar-percent">80%</div>
-                        </div>
-                        <div class="skillbar clearfix php" data-percent="70%">
-                            <h4 class="skillbar-title"><span>PHP</span></h4>
-                            <div class="skillbar-bar"></div>
-                            <div class="skill-bar-percent">70%</div>
-                        </div>
-                        <div class="skillbar clearfix server" data-percent="60%">
-                            <h4 class="skillbar-title"><span>Server</span></h4>
-                            <div class="skillbar-bar"></div>
-                            <div class="skill-bar-percent">60%</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Liste des frameworks et outils -->
-                <div class="wall">
-                    <div class="v-boxes">
-
-                        
-
-                        <!-- Bloc 1 : Figma -->
-                        <div class="box">
-                            <span class="tooltip">Figma</span>
-                            <!-- Face avant -->
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <img src="../images/Logo Skill/Figma.png" alt="Figma Logo">
-                                </div>
-                            </div>
-                            <!-- Face arrière -->
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bx-star'></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloc 2 : Photoshop -->
-                        <div class="box">
-                            <span class="tooltip">Photoshop</span>
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <img src="../images/Logo Skill/Photoshop.png" alt="Photoshop Logo">
-                                </div>
-                            </div>
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bx-star'></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloc 3 : Illustrator -->
-                        <div class="box">
-                            <span class="tooltip">Illustrator</span>
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <!-- Image de logo -->
-                                    <img src="../images/Logo Skill/Illustrator.png" alt="Illustrator Logo">
-                                </div>
-                            </div>
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloc 4 : Tailwind -->
-                        <div class="box">
-                            <span class="tooltip">Tailwind</span>
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <img src="../images/Logo Skill/Tailwind.png" alt="Tailwind Logo">
-                                </div>
-                            </div>
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Deuxième colonne -->
-                    <div class="v-boxes second">
-                        <!-- Bloc 5 : MySQL -->
-                        <div class="box">
-                            <span class="tooltip">MySQL</span>
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <img src="../images/Logo Skill/MySQL.png" alt="MySQL Logo">
-                                </div>
-                            </div>
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bx-star'></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloc 6 : Trello -->
-                        <div class="box">
-                            <span class="tooltip">Trello</span>
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <img src="../images/Logo Skill/Trello.png" alt="Trello Logo">
-                                </div>
-                            </div>
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloc 7 : Visual Studio Code -->
-                        <div class="box">
-                            <span class="tooltip">VS Code</span>
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <img src="../images/Logo Skill/VisualStudioCode.png" alt="VisualStudioCode Logo">
-                                </div>
-                            </div>
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Troisième colonne -->
-                    <div class="v-boxes third">
-                        <!-- Bloc 8 : Wampserver  -->
-                        <div class="box">
-                            <span class="tooltip">Wampserver </span>
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <img src="../images/Logo Skill/WampServer.png" alt="WampServer Logo">
-                                </div>
-                            </div>
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
-                                    <i class='bx bx-star'></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bloc 9 : Postman -->
-                        <div class="box">
-                            <span class="tooltip">Postman</span>
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <img src="../images/Logo Skill/PostMan.png" alt="PostMan Logo">
-                                </div>
-                            </div>
-                            <div class="box-back">
-                                <div class="box-text">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Quatrième colonne -->
-                    <div class="v-boxes forth">
-                        <!-- Bloc 10 : GitHub -->
-                        <div class="box link">
-                            <div class="box-face">
-                                <div class="box-text">
-                                    <i class="fab fa-github-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-
-
-        </div>
-        </section>
-
-        <!-- CONTACT SECTION DESIGN -->
+    <main>
+        <!-- Contact Form Section -->
         <section class="contact" id="contact">
-
-            <div class="orbit2 orbit-2"></div>
-            <div class="balance balance-1"></div>
-
-            <h2 class="heading">Envie de <span>collaborer ?</span></h2>
-
-            <p>N’hésitez pas à me contacter pour discuter d’un projet ou simplement pour échanger sur le développement
-                web.</p>
-
-
-            <form action="#">
+            <h2>Envie de collaborer ?</h2>
+            <form action="../BACK-END/process/contact.php" method="POST">
                 <div class="input-box">
-                    <input type="text" placeholder="Votre nom">
-                    <input type="email" placeholder="Adresse mail">
+                    <input name="name" type="text" placeholder="Votre nom" required>
+                    <input name="email" type="email" placeholder="Adresse mail" required>
                 </div>
 
                 <div class="input-box">
-                    <input type="number" placeholder="Numéro de téléphone">
-                    <input type="text" placeholder="Votre email">
+                    <input name="phone" type="number" placeholder="Numéro de téléphone">
+                    <input name="emailConfirm" type="text" placeholder="Confirmez votre email">
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Votre Message"></textarea>
+
+                <textarea name="message" cols="30" rows="10" placeholder="Votre Message" required></textarea>
+
+                <!-- reCAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="6LeQ0rsqAAAAAGIvKU2SlHK8fFJaRi-i-QDshAPI"></div>
+
                 <input type="submit" value="Envoyer" class="btn">
-
             </form>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by Moonye | All Rights Reserved</p>
-        </div>
-        <div class="footer-iconTop">
-            <a href="#about-me"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
+    <footer>
+        <p>Copyright &copy; 2024 by Moonye | All Rights Reserved</p>
     </footer>
-
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
-    <div class="comet"></div>
 </body>
 
 </html>

@@ -59,3 +59,11 @@ darkModeIcon.addEventListener("click", () => {
 
 });
 
+/*========== formulaire  ==========*/
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LfX2LsqAAAAAEyA7K6LjrJRTP0OEBvBdOO5CFsk', {action: 'LOGIN'});
+      // Ajoutez ici votre logique pour traiter le token, comme un envoi au serveur.
+    });
+  }

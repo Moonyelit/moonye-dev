@@ -25,11 +25,7 @@ body:before {
 }
 
 
-/* OK : */
 /* LOADER  */
-
-/* LOADER  */
-
 #loader {
   position: fixed;
   left: 0;
@@ -92,7 +88,29 @@ body:before {
   }
 }
 
+/*Dark Mode Loader*/
+#loader {
+  background: var(--bg-color);
+}
 
+.dark-mode .water {
+  background-color: var(--bg-color);
+}
+
+.dark-mode .water:before, .water:after {
+  background-color: var(--hover-color2);
+}
+
+.water:before {
+  background: rgba(251, 241, 225, 0.7);
+}
+
+.water:after {
+  background: rgba(251, 241, 225, 0.3);
+}
+
+
+/*HERO SECTION*/
 @media (max-width: 1999px) {
   /* HOME Section */
   
@@ -115,6 +133,14 @@ body:before {
   
   .dark-mode .orbit {
     background: url(../images/bg-orbit2.png) no-repeat center;
+    background-size: contain;
+    height: 600px;
+    position: absolute;
+    width: 50%;
+    z-index: 0;
+    mix-blend-mode: darken;
+    animation: rotation2 120s infinite linear;
+    opacity: 0.45;
   }
   
   @keyframes rotation2 {
@@ -357,12 +383,11 @@ body:before {
     position: relative;
   }
   
-  .dark-mode .about-img img {
-    left: 8.5rem;
-  }
+
   
   .about-yellow {
     display: block;
+    opacity: 1;
   }
   
   .about-black {
@@ -376,6 +401,7 @@ body:before {
   
   .dark-mode .about-black {
     display: block;
+    opacity: 1; 
   }
   
   .heading {
@@ -441,6 +467,7 @@ body:before {
   }
   
   .services {
+    margin-top: 5rem;
     padding-bottom: 10rem;
     max-height: 100vh;
     min-height: 80vh;
@@ -609,4 +636,4 @@ body:before {
     color: var(--text-color);
   }
 }
-  
+

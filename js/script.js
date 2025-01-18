@@ -60,10 +60,8 @@ darkModeIcon.addEventListener("click", () => {
 });
 
 /*========== formulaire  ==========*/
-  function onClick(e) {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6LfX2LsqAAAAAEyA7K6LjrJRTP0OEBvBdOO5CFsk', {action: 'LOGIN'});
-      // Ajoutez ici votre logique pour traiter le token, comme un envoi au serveur.
-    });
-  }
+grecaptcha.ready(function () {
+  grecaptcha.execute('6LfI8LsqAAAAANMEOv8Xah0NePBudcP1mBfD2Spk', { action: 'submit' }).then(function (token) {
+    document.getElementById('recaptchaToken').value = token;
+  });
+});

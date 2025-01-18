@@ -61,9 +61,8 @@
     </script>
 
     <!-- GOOGLE reCAPTCHA -->
-    <script defer
-        src="https://www.google.com/recaptcha/enterprise.js?render=6LfX2LsqAAAAAEyA7K6LjrJRTP0OEBvBdOO5CFsk"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfI8LsqAAAAANMEOv8Xah0NePBudcP1mBfD2Spk"></script>
+    
 
     <!-- SCROLL REVEAL -->
     <script defer src="https://unpkg.com/scrollreveal"></script>
@@ -367,6 +366,8 @@
 
 
             <form action="../BACK-END/process/contact.php" method="POST">
+                <input type="hidden" name="g-recaptcha-response" id="recaptchaToken">
+
                 <div class="input-box">
                     <input name="name" type="text" placeholder="Votre nom" required>
                     <input name="email" type="email" placeholder="Adresse mail" required>
@@ -406,5 +407,6 @@
     <div class="comet"></div>
 </body>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 </html>

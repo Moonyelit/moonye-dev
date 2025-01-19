@@ -61,19 +61,24 @@ darkModeIcon.addEventListener("click", () => {
 
 /*========== forumulaire ==========*/
 
-document.querySelector("form").addEventListener("submit", function (e) {
-  const recaptchaResponse = document.getElementById("g-recaptcha-response").value;
-  if (!recaptchaResponse) {
-    e.preventDefault(); // Bloque la soumission du formulaire
-    alert("Veuillez valider le CAPTCHA.");
-  }
-});
-
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const form = e.target;
   const formData = new FormData(form);
+
+  // Vérification des emails identiques
+  if (formData.get('email') !== formData.get('emailConfirm')) {
+      alert("Les adresses e-mail ne correspondent pas.");
+      return;
+  }
+
+  // Vérification reCAPTCHA avant l'envoi
+  const recaptchaResponse = document.getElementById("g-recaptcha-response").value;
+  if (!recaptchaResponse) {
+      alert("Veuillez valider le CAPTCHA.");
+      return;
+  }
 
   try {
       const response = await fetch(form.action, {
@@ -85,9 +90,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
       });
 
       if (response.ok) {
-          alert('Votre message a été envoyé avec succès !');
-          window.location.href = 'index.html';
+          document.getElementById('alertSuccess').style.display = 'block';
           form.reset(); // Réinitialiser le formulaire
+          setTimeout(() => {
+              window.location.href = 'index.html#merci'; // Redirection après succès
+          }, 2000);
       } else {
           alert('Une erreur est survenue. Veuillez réessayer.');
       }

@@ -277,31 +277,36 @@
         </section>
   
         <!-- CONTACT SECTION DESIGN -->
+
         <section class="contact" id="contact">
 
             <div class="orbit2 orbit-2"></div>
             <div class="balance balance-1"></div>
-
-
+        
             <h2 class="heading">Contactez <span>Moi !</span></h2>
-
-            <form action="https://formspree.io/f/xzzzlvpr" method="POST">
-                <input type="hidden" name="_redirect" value="https://votre-site.com/merci.html">
+        
+            <form id="contactForm" action="https://formspree.io/f/xzzzlvpr" method="POST">
+                <!-- Redirection après soumission -->
+                <input type="hidden" name="_redirect" value="https://moonyelit.github.io/moonye-dev/index.html#merci">
+                
+                <!-- Honeypot pour filtrer les robots -->
+                <input type="text" name="_gotcha" style="display:none" autocomplete="off">
+        
+                <!-- reCAPTCHA -->
                 <input type="hidden" name="g-recaptcha-response" id="recaptchaToken">
         
                 <div class="input-box">
-                    <input name="name" type="text" placeholder="Votre nom" required>
+                    <input name="name" type="text" placeholder="Votre nom" required pattern="[A-Za-zÀ-ÿ\s\-]{2,50}" title="Seuls les caractères alphabétiques sont autorisés (2 à 50 caractères)">
                     <input name="email" type="email" placeholder="Adresse mail" required>
                 </div>
         
                 <div class="input-box">
-                    <input name="phone" type="number" placeholder="Numéro de téléphone (facultatif)">
-                    <input name="emailConfirm" type="text" placeholder="Confirmez votre email">
+                    <input name="phone" type="tel" placeholder="Numéro de téléphone (facultatif)" pattern="^\+?\d{0,15}$" title="Numéro de téléphone valide uniquement">
+                    <input name="emailConfirm" type="email" placeholder="Confirmez votre email" required>
                 </div>
         
-                <textarea name="message" cols="30" rows="10" placeholder="Votre Message" required></textarea>
+                <textarea name="message" cols="30" rows="10" placeholder="Votre Message" required minlength="10" maxlength="500"></textarea>
         
-                <!-- reCAPTCHA -->
                 <div class="recaptcha-container">
                     <div class="g-recaptcha" data-sitekey="6Lfp-LsqAAAAAO7zEoO_eKG0dnv4IE2g5QhL9sq7"></div>
                     <script src="https://www.google.com/recaptcha/api.js" defer></script>
@@ -309,12 +314,11 @@
         
                 <input type="submit" value="Envoyer" class="btn">
             </form>
-  
-            <div id="alertSuccess" class="alert-success">Votre message a été envoyé avec succès !</div>
-
-
+        
+            <div id="alertSuccess" class="alert-success" style="display: none;">Votre message a été envoyé avec succès !</div>
+        
         </section>
-
+        
 
      
     </main>

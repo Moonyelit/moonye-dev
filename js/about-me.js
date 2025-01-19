@@ -7,11 +7,9 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal(".heading", { origin: "top" });
-ScrollReveal().reveal(".contact form , .about-text", { origin: "bottom" });
+ScrollReveal().reveal(".contact form, .about-text", { origin: "bottom" });
 ScrollReveal().reveal(".contact p, .skills", { origin: "left" });
-ScrollReveal().reveal(".liste, .home-content p, .about-content", {
-  origin: "right",
-});
+ScrollReveal().reveal(".wall, .v-boxes", { origin: "right" });
 
 // ----------------------------
 // Animation des barres de compétences
@@ -75,5 +73,5 @@ ScrollReveal().reveal(".liste, .home-content p, .about-content", {
 		var skills = new SkillsBar( ".skillbar-bar" );
 	});
 })();
-  
+
 

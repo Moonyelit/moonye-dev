@@ -285,20 +285,34 @@
 
             <h2 class="heading">Contactez <span>Moi !</span></h2>
 
-            <form action="#">
+            <form action="https://formspree.io/f/xzzzlvpr" method="POST">
+                <input type="hidden" name="_redirect" value="https://votre-site.com/merci.html">
+                <input type="hidden" name="g-recaptcha-response" id="recaptchaToken">
+        
                 <div class="input-box">
-                    <input type="text" placeholder="Votre nom">
-                    <input type="email" placeholder="Adresse mail">
+                    <input name="name" type="text" placeholder="Votre nom" required>
+                    <input name="email" type="email" placeholder="Adresse mail" required>
                 </div>
-
+        
                 <div class="input-box">
-                    <input type="number" placeholder="Numéro de téléphone">
-                    <input type="text" placeholder="Votre email">
+                    <input name="phone" type="number" placeholder="Numéro de téléphone (facultatif)">
+                    <input name="emailConfirm" type="text" placeholder="Confirmez votre email">
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Votre Message"></textarea>
+        
+                <textarea name="message" cols="30" rows="10" placeholder="Votre Message" required></textarea>
+        
+                <!-- reCAPTCHA -->
+                <div class="recaptcha-container">
+                    <div class="g-recaptcha" data-sitekey="6Lfp-LsqAAAAAO7zEoO_eKG0dnv4IE2g5QhL9sq7"></div>
+                    <script src="https://www.google.com/recaptcha/api.js" defer></script>
+                </div>
+        
                 <input type="submit" value="Envoyer" class="btn">
+            </form>
+  
+            <div id="alertSuccess" class="alert-success">Votre message a été envoyé avec succès !</div>
 
-            </form>       
+
         </section>
 
 
@@ -319,5 +333,8 @@
 
     
 </body>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
 
 </html>

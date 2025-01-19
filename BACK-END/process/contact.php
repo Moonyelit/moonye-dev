@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = cleanInput($_POST['name'] ?? '');
     $email = cleanInput($_POST['email'] ?? '');
     $message = cleanInput($_POST['message'] ?? '');
-    $captcha = $_POST['g-recaptcha-response'] ?? '';
+    $captcha = $_POST['g-recaptcha-response'] ?? ''; // Champ reCAPTCHA
 
     $errors = [];
 
@@ -36,12 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Validation reCAPTCHA v3
-    $secretKey = '6LfI8LsqAAAAAD6Wx-jchHmmWoQk5SqcF33FscRG';
+    // Validation reCAPTCHA v2
+    $secretKey = '6Lfp-LsqAAAAAG9W06fB41-M7ZrixP4R68YgJjgm';
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha");
     $responseKeys = json_decode($response, true);
 
-    if (!$responseKeys['success'] || $responseKeys['score'] < 0.5) {
+    if (!$responseKeys['success']) {
         echo json_encode(['success' => false, 'errors' => ['La validation reCAPTCHA a échoué.']]);
         exit;
     }

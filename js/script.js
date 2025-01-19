@@ -59,9 +59,3 @@ darkModeIcon.addEventListener("click", () => {
 
 });
 
-/*========== formulaire  ==========*/
-grecaptcha.ready(function () {
-  grecaptcha.execute('6LfI8LsqAAAAANMEOv8Xah0NePBudcP1mBfD2Spk', { action: 'submit' }).then(function (token) {
-    document.getElementById('recaptchaToken').value = token;
-  });
-});

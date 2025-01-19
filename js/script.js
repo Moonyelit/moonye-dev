@@ -59,3 +59,39 @@ darkModeIcon.addEventListener("click", () => {
 
 });
 
+/*========== forumulaire ==========*/
+
+document.querySelector("form").addEventListener("submit", function (e) {
+  const recaptchaResponse = document.getElementById("g-recaptcha-response").value;
+  if (!recaptchaResponse) {
+    e.preventDefault(); // Bloque la soumission du formulaire
+    alert("Veuillez valider le CAPTCHA.");
+  }
+});
+
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  try {
+      const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+              Accept: 'application/json',
+          },
+      });
+
+      if (response.ok) {
+          alert('Votre message a été envoyé avec succès !');
+          window.location.href = 'index.html';
+          form.reset(); // Réinitialiser le formulaire
+      } else {
+          alert('Une erreur est survenue. Veuillez réessayer.');
+      }
+  } catch (error) {
+      alert('Erreur réseau. Veuillez vérifier votre connexion.');
+  }
+});

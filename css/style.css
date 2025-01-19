@@ -522,6 +522,12 @@ section {
   cursor: pointer;
 }
 
+.recaptcha-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
 @media (min-width: 2000px) {
   .orbit2 {
     height: 900px;
@@ -581,4 +587,18 @@ section {
   .logo {
     font-size: 2.5rem;
   }
+}
+
+/* Alert Message */
+.alert-success {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--hover-color2);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
 }

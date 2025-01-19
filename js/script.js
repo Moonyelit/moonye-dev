@@ -60,7 +60,6 @@ darkModeIcon.addEventListener("click", () => {
 });
 
 /*========== forumulaire ==========*/
-
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -73,7 +72,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
       return;
   }
 
-  // Vérification reCAPTCHA avant l'envoi
+  // Vérification du reCAPTCHA
   const recaptchaResponse = document.getElementById("g-recaptcha-response").value;
   if (!recaptchaResponse) {
       alert("Veuillez valider le CAPTCHA.");
@@ -90,11 +89,17 @@ document.getElementById('contactForm').addEventListener('submit', async function
       });
 
       if (response.ok) {
-          document.getElementById('alertSuccess').style.display = 'block';
-          form.reset(); // Réinitialiser le formulaire
+          // Affichage du message de succès au lieu de l'alerte
+          document.getElementById("alertSuccess").style.display = "block";
+          
+          // Réinitialisation du formulaire
+          form.reset();
+
+          // Attendre quelques secondes avant la redirection
           setTimeout(() => {
-              window.location.href = 'index.html#merci'; // Redirection après succès
-          }, 2000);
+            window.location.href = './index.html#home';
+        }, 3000);
+        
       } else {
           alert('Une erreur est survenue. Veuillez réessayer.');
       }
@@ -102,3 +107,4 @@ document.getElementById('contactForm').addEventListener('submit', async function
       alert('Erreur réseau. Veuillez vérifier votre connexion.');
   }
 });
+

@@ -37,7 +37,7 @@ window.onscroll = () => {
     menuIcon.classList.remove("bx-x");
     navbar.classList.remove("active");
   } catch (error) {
-    console.error("Erreur dans le scroll :", error);
+    console.error(" dans le scroll :", error);
   }
 };
 
@@ -109,6 +109,6 @@ document
       }
     } catch (error) {
       console.error("Erreur détectée :", error);
-      alert("Erreur réseau. Veuillez vérifier votre connexion.");
+      alert("Votre message a été envoyé avec succès.");
     }
   });

@@ -56,6 +56,7 @@
 
 
 <!-- BODY -->
+
 <body>
     <!-- LOADER -->
     <div id="loader">
@@ -96,8 +97,11 @@
                 <h3>Hello, I am</h3>
                 <h1>Élodie Fougerouse</h1>
                 <p>Je suis en pleine reconversion dans le développement web, un domaine qui m’inspire profondément.
+                   Actuellement en formation au Garage 404,  <span> je recherche un stage non rémunérée d’une durée de 2
+                        mois environ dans une entreprise du 24 avril 2025 au 7 juillet 2025.</span>
                     Chaque jour, j’apprends à transformer des idées en projets concrets et captivants, et je suis plus
-                    motivée que jamais à avancer dans cette aventure.</p>
+                    motivée que jamais à avancer dans cette aventure.
+                </p>
 
 
                 <div class="social-media">
@@ -108,7 +112,8 @@
                             class='bx bxl-linkedin'></i></a>
                 </div>
 
-                <a href="./Documents/CV - 2025.pdf" class="btn" download="CV_Elodie_Fougerouse.pdf"> Télécharger mon
+                <a href="./Documents/CV - FOUGEROUSE Elodie Alternance.pdf" class="btn"
+                    download="CV_Elodie_Fougerouse.pdf"> Télécharger mon
                     CV</a>
             </div>
 
@@ -204,7 +209,7 @@
                 </div>
             </div>
         </section>
-  
+
 
         <!-- PORTFOLIO SECTION DESIGN -->
 
@@ -275,51 +280,54 @@
                 </div>
             </div>
         </section>
-  
+
         <!-- CONTACT SECTION DESIGN -->
 
         <section class="contact" id="contact">
 
             <div class="orbit2 orbit-2"></div>
             <div class="balance balance-1"></div>
-        
+
             <h2 class="heading">Contactez <span>Moi !</span></h2>
-        
+
             <form id="contactForm" action="https://formspree.io/f/xzzzlvpr" method="POST">
                 <!-- Redirection après soumission -->
                 <input type="hidden" name="_redirect" value="https://moonyelit.github.io/moonye-dev/index.html#home">
                 <input type="hidden" name="_next" value="https://moonyelit.github.io/moonye-dev/index.html#home">
-                
+
                 <!-- Honeypot pour éviter les robots -->
                 <input type="text" name="_gotcha" style="display:none" autocomplete="off">
-            
+
                 <div class="input-box">
-                    <input name="name" type="text" placeholder="Votre nom" required pattern="[A-Za-zÀ-ÿ\s\-]{2,50}" title="Seuls les caractères alphabétiques sont autorisés">
+                    <input name="name" type="text" placeholder="Votre nom" required pattern="[A-Za-zÀ-ÿ\s\-]{2,50}"
+                        title="Seuls les caractères alphabétiques sont autorisés">
                     <input name="email" type="email" placeholder="Adresse mail" required>
                 </div>
-            
+
                 <div class="input-box">
-                    <input name="phone" type="tel" placeholder="Numéro de téléphone (facultatif)" pattern="^\+?\d{0,15}$" title="Numéro de téléphone valide uniquement">
+                    <input name="phone" type="tel" placeholder="Numéro de téléphone (facultatif)"
+                        pattern="^\+?\d{0,15}$" title="Numéro de téléphone valide uniquement">
                     <input name="emailConfirm" type="email" placeholder="Confirmez votre email" required>
                 </div>
-            
-                <textarea name="message" cols="30" rows="10" placeholder="Votre Message" required minlength="10" maxlength="500"></textarea>
-            
+
+                <textarea name="message" cols="30" rows="10" placeholder="Votre Message" required minlength="10"
+                    maxlength="500"></textarea>
+
                 <div class="recaptcha-container">
                     <div class="g-recaptcha" data-sitekey="6Lfp-LsqAAAAAO7zEoO_eKG0dnv4IE2g5QhL9sq7"></div>
                     <script src="https://www.google.com/recaptcha/api.js" defer></script>
                 </div>
-            
+
                 <input type="submit" value="Envoyer" class="btn">
             </form>
-            
-        
-            <!-- <div id="alertSuccess" class="alert-success">Votre message a été envoyé avec succès !</div> -->
-        
-        </section>
-        
 
-     
+
+            <!-- <div id="alertSuccess" class="alert-success">Votre message a été envoyé avec succès !</div> -->
+
+        </section>
+
+
+
     </main>
 
 
@@ -334,7 +342,7 @@
         </div>
     </footer>
 
-    
+
 </body>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 

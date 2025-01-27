@@ -156,6 +156,11 @@
     font-size: 2rem; 
     text-align: justify;
   }
+
+  .home-content span{
+    color: var(--title1);
+    font-weight: bold;
+  }
   
   .home-content .social-media a {
     display: inline-flex;

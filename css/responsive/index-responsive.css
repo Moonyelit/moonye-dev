@@ -285,6 +285,11 @@ BREKPOINT
     max-height: 100vh;
   }
 
+  .home .btn {
+    margin-right: 1rem;
+    margin-bottom: 1rem;  
+  }
+
   /* ABOUT Section */
 
   span {
@@ -764,7 +769,7 @@ BREKPOINT
     justify-content: center;
     text-align: center;
     min-height: 100vh;
-    padding-top: 10rem;
+    padding-top: 5rem;
   }
 
   .home-content h3 {
@@ -1080,7 +1085,7 @@ BREKPOINT
   }
 }
 
-@media (max-width: 365px) {
+@media (max-width: 425px) {
   .home {
     margin-top: 6rem;
   }
@@ -1095,7 +1100,7 @@ BREKPOINT
   }
 
   .home-content .social-media a {
-    margin: 1rem 1.5rem 1rem 0;
+    margin: 0.6rem 1.5rem 0.6rem 0;
   }
 
   .about-img img {

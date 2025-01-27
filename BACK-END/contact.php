@@ -1,4 +1,23 @@
 <?php
+
+require_once './config.php';
+
+
+//Eviter l'envoie de spam
+session_start();
+if (!isset($_SESSION['last_submit_time'])) {
+    $_SESSION['last_submit_time'] = time();
+} else {
+    $delay = 30; // Délai de 30 secondes entre les envois
+    if (time() - $_SESSION['last_submit_time'] < $delay) {
+        echo json_encode(['success' => false, 'errors' => ['Veuillez attendre avant de soumettre à nouveau.']]);
+        exit;
+    }
+    $_SESSION['last_submit_time'] = time();
+}
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
 
@@ -44,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Validation reCAPTCHA
-    $secretKey = '6Lfp-LsqAAAAAG9W06fB41-M7ZrixP4R68YgJjgm';
+    $secretKey = RECAPTCHA_SECRET_KEY;
     $recaptchaResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha");
     $responseKeys = json_decode($recaptchaResponse, true);
 

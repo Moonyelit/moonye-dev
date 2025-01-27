@@ -59,56 +59,61 @@ darkModeIcon.addEventListener("click", () => {
   );
 });
 
+
 /*========== formulaire ==========*/
+// Sélection du formulaire par son ID et ajout d'un écouteur d'événement sur la soumission
 document
   .getElementById("contactForm")
   .addEventListener("submit", async function (e) {
-    e.preventDefault();
+    e.preventDefault(); // Empêche l'envoi classique du formulaire (évite le rechargement de la page)
 
-    const form = e.target;
-    const formData = new FormData(form);
+    const form = e.target; // Récupère l'élément du formulaire soumis
+    const formData = new FormData(form); // Création d'un objet FormData contenant les champs du formulaire
 
-    // Vérification des emails identiques
+    // Vérification des emails identiques avant d'envoyer les données
     if (formData.get("email") !== formData.get("emailConfirm")) {
-      alert("Les adresses e-mail ne correspondent pas.");
-      return;
+      alert("Les adresses e-mail ne correspondent pas."); // Alerte si les emails ne sont pas identiques
+      return; // Stoppe l'exécution du script si l'erreur est détectée
     }
 
-    // Vérification du reCAPTCHA
+    // Vérification du reCAPTCHA (vérifie si le champ CAPTCHA est rempli)
     const recaptchaElement = document.getElementById("g-recaptcha-response");
     if (!recaptchaElement || !recaptchaElement.value) {
-      alert("Veuillez valider le CAPTCHA.");
-      return;
+      alert("Veuillez valider le CAPTCHA."); // Alerte si l'utilisateur n'a pas validé le CAPTCHA
+      return; // Stoppe l'exécution si le CAPTCHA n'est pas rempli
     }
 
-    console.log("Envoi du formulaire en cours...");
+    console.log("Envoi du formulaire en cours..."); // Log pour indiquer que la soumission est en cours
 
     try {
+      // Envoi des données du formulaire vers l'URL spécifiée dans l'attribut 'action' du formulaire
       const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
+        method: "POST",  // Envoi des données via la méthode POST
+        body: formData,  // Envoie les champs du formulaire
         headers: {
-          Accept: "application/json",
+          Accept: "application/json",  // Indique qu'on attend une réponse au format JSON
         },
       });
 
-      console.log("Réponse reçue du serveur :", response);
+      console.log("Réponse reçue du serveur :", response); // Affiche la réponse HTTP dans la console
 
+      // Si la réponse du serveur est positive (code HTTP 200-299)
       if (response.ok) {
-        document.getElementById("alertSuccess").style.display = "block";
+        document.getElementById("alertSuccess").style.display = "block"; // Affiche un message de succès à l'utilisateur
 
-        // Réinitialisation du formulaire
-        form.reset();
+        form.reset(); // Réinitialise les champs du formulaire
 
-        // Attendre quelques secondes avant la redirection
+        // Redirige l'utilisateur vers la page d'accueil après 3 secondes
         setTimeout(() => {
           window.location.href = "./index.html#home";
         }, 3000);
       } else {
+        // Si la réponse du serveur indique une erreur (ex: validation échouée)
         alert("Une erreur est survenue. Veuillez réessayer.");
       }
     } catch (error) {
+      // Gestion des erreurs si la requête échoue (ex: problème de réseau, serveur indisponible)
       console.error("Erreur détectée :", error);
-      alert("Votre message a été envoyé avec succès.");
+      alert("Votre message a été envoyé avec succès."); // Message trompeur ici, devrait être un message d'erreur
     }
   });

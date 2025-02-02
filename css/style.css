@@ -567,9 +567,9 @@ section {
 }
 
 @media (max-width: 1200px) {
-  .orbit2 {
+  /* .orbit2 {
     height: 350px;
-  }
+  } */
 
   .dark-mode .orbit2 {
     height: 400px;

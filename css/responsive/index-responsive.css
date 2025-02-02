@@ -189,8 +189,8 @@ BREKPOINT
 
   .home .profession-container .profession-box {
     position: absolute;
-    top: -30rem;
-    right: 44rem;
+    top: -20%;
+    right: 10%;
     width: 768px;
     height: 140vh;
     display: flex;
@@ -620,11 +620,11 @@ BREKPOINT
   }
 
   .home .profession-container .profession-box {
-    right: -10%;
+    right: 0%;
   }
 
   .home .profession-container .overlay {
-    right: -6%;
+    right: -0%;
   }
 
   .home-img img {

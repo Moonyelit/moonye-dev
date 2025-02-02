@@ -134,6 +134,11 @@ BREKPOINT
     text-align: justify;
   }
 
+  .home-content span{
+    color: var(--title1);
+    font-weight: bold;
+  }
+
   .home-content .social-media a {
     display: inline-flex;
     justify-content: center;
@@ -534,7 +539,8 @@ BREKPOINT
   .portfolio-container .portfolio-box {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 80%;
+    height: auto;
     justify-content: center;
     border-radius: 2rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);

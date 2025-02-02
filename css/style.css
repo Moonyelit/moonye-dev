@@ -137,11 +137,14 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
   position: relative;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
   position: relative;
   z-index: 1;
+  flex: 1;
 }
 
 /* Fond étoilés */
@@ -377,8 +380,9 @@ section {
   flex-wrap: wrap;
   padding: 2rem 7%;
   background: var(--text-color);
-  position: relative;
-  bottom: 0;
+  /* Suppression de la position fixed */
+  /* position: fixed;
+  bottom: 0; */
   width: 100%;
   z-index: 1;
 }
@@ -567,9 +571,9 @@ section {
 }
 
 @media (max-width: 1200px) {
-  /* .orbit2 {
+  .orbit2 {
     height: 350px;
-  } */
+  }
 
   .dark-mode .orbit2 {
     height: 400px;

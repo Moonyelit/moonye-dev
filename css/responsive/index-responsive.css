@@ -500,7 +500,8 @@ BREKPOINT
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
   }
 
   .dark-mode .portfolio {
@@ -539,7 +540,7 @@ BREKPOINT
   .portfolio-container .portfolio-box {
     position: relative;
     display: flex;
-    width: 80%;
+    width: 100%;
     height: auto;
     justify-content: center;
     border-radius: 2rem;

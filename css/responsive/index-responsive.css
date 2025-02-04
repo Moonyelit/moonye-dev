@@ -107,6 +107,7 @@ BREKPOINT
     align-items: center;
     position: relative;
     z-index: 2;
+    padding: 3rem 0% 23rem;
   }
 
   .home .home-content {
@@ -194,7 +195,7 @@ BREKPOINT
 
   .home .profession-container .profession-box {
     position: absolute;
-    top: -20%;
+    top: 0;
     right: 10%;
     width: 768px;
     height: 140vh;
@@ -347,9 +348,9 @@ BREKPOINT
     position: relative;
   }
 
-  .dark-mode .about-img img {
+  /* .dark-mode .about-img img {
     left: 8.5rem;
-  }
+  } */
 
   .about-yellow {
     display: block;
@@ -357,7 +358,6 @@ BREKPOINT
 
   .about-black {
     display: none;
-    opacity: 0;
   }
 
   .dark-mode .about-yellow {
@@ -605,39 +605,6 @@ BREKPOINT
   }
 }
 
-@media (max-width: 1199px) {
-  html {
-    font-size: 40%;
-  }
-
-  .orbit {
-    height: 300px;
-  }
-
-  .dark-mode .orbit {
-    height: 300px;
-  }
-
-  .home-content h3 {
-    font-size: 5rem;
-  }
-
-  .home-content h1 {
-    font-size: 6rem;
-  }
-
-  .home .profession-container .profession-box {
-    right: 0%;
-  }
-
-  .home .profession-container .overlay {
-    right: -0%;
-  }
-
-  .home-img img {
-    right: 0;
-  }
-}
 
 @media (max-width: 1100px) {
   .home .profession-container .profession-box {
@@ -772,11 +739,16 @@ BREKPOINT
   .home {
     display: flex;
     align-items: center;
-    padding: 0 3% 23rem;
+    padding: 0 0% 23rem;
     justify-content: center;
     text-align: center;
     min-height: 100vh;
     padding-top: 5rem;
+  }
+
+  .home .home-content {
+    max-width: 100rem;
+    width: 80%;
   }
 
   .home-content h3 {
@@ -820,6 +792,13 @@ BREKPOINT
     z-index: 0;
   }
 
+  .home-boutons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
   .home .profession-box .profession:nth-child(1) {
     transform: rotate(-90deg) translate(-115px, -230px);
   }
@@ -853,7 +832,7 @@ BREKPOINT
 
   .home .profession-container .overlay {
     position: fixed;
-    top: 75rem;
+    top: 90vh;
     left: 50%;
     right: 0;
     transform: rotate(90deg) translate(-50%, 50%) scaleY(3);

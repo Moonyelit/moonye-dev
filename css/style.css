@@ -7,9 +7,9 @@
 @font-face {
   font-family: "RegardsRegular";
   src: url("./fonts/regards-webfont.woff2") format("woff2"),
-    url("./fonts/regards-webfont.woff") format("woff"),
-    url("./fonts/regards.ttf") format("truetype"),
-    url("./fonts/regards.otf") format("opentype");
+       url("./fonts/regards-webfont.woff") format("woff"),
+       url("./fonts/regards.ttf") format("truetype"),
+       url("./fonts/regards.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -39,9 +39,6 @@
   --glass-border: rgba(255, 255, 255, 0.3);
   --glass-shadow: rgba(0, 0, 0, 0.1);
 
-
-
-
   *::selection {
     background: var(--hover-color2);
     color: var(--bg-color);
@@ -52,6 +49,7 @@
   --title1: "RegardsRegular", sans-serif;
   --nav-a: "logic-monospace", mono;
 }
+
 /* DARK STYLE ******************************************************************************************************************************************
 ***************************************************************************************************************************************************
 ************************************************************************************************************************************************* */
@@ -483,8 +481,13 @@ section {
 }
 
 .contact h2 {
-  margin-bottom: 3rem;
-}
+    margin-bottom: 4rem;
+    font-family: var(--title1);
+    font-size: 5vh; 
+    display: flex;
+    justify-content: center; 
+  }
+  
 
 .contact form {
   max-width: 70rem;
@@ -552,8 +555,8 @@ section {
   }
 
   .contact {
-      justify-content: space-between;
-    }
+    justify-content: space-between;
+  }
 
   .contact form {
     max-width: 120rem;
@@ -564,7 +567,6 @@ section {
     padding: 3rem;
     font-size: 2.2rem;
   }
-
 }
 
 @media (max-width: 1200px) {
@@ -610,5 +612,5 @@ section {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 }

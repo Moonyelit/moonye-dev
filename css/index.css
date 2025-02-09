@@ -31,7 +31,8 @@
   overflow: hidden;
 }
 
-.water:before, .water:after {
+.water:before,
+.water:after {
   content: '';
   position: absolute;
   width: 100px;
@@ -70,7 +71,8 @@
   background-color: var(--bg-color);
 }
 
-.dark-mode .water:before, .water:after {
+.dark-mode .water:before,
+.water:after {
   background-color: var(--hover-color2);
 }
 
@@ -83,9 +85,6 @@
 }
 
 
-/*HERO SECTION*/
-@media (max-width: 1999px) {
-  
   /* HOME Section */
   .orbit-1 {
     top: -30rem;
@@ -137,9 +136,19 @@
     max-width: 100rem;
     width: 40%;
   }
+
+  .home-content .section-title{
+    line-height: 5rem;
+  }
+
+  .home-content .intro-text {
+    font-size: 2.5vh;
+    margin-bottom: 2rem;
+    font-family: var(--title1);
+  }
   
   .home-content h3 {
-    font-size: 5rem; 
+    font-size: 5vh; 
     margin-bottom: 0.3rem;
     font-weight: 700;
     line-height: 1;
@@ -147,18 +156,18 @@
   }
   
   .home-content h1 {
-    font-size: 6rem; 
+    font-size: 6vh; 
     font-weight: 700;
     margin-bottom: 0.3rem;
     font-family: var(--title1);
   }
   
   .home-content p {
-    font-size: 2rem; 
+    font-size: 2vh; 
     text-align: justify;
   }
 
-  .home-content span{
+  .home-content span {
     color: var(--title1);
     font-weight: bold;
   }
@@ -173,7 +182,7 @@
     border: 0.2rem solid var(--text-color);
     border-radius: 50%;
     box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-    font-size: 3.5rem; /* Augmenté de 0.5rem */
+    font-size: 3.5rem;
     color: var(--text-color);
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.5s ease;
@@ -206,7 +215,6 @@
     color: var(--white-color);
     border-color: var(--hover-color2);
   }
-
   
   .home .profession-container {
     position: absolute;
@@ -316,6 +324,7 @@
   
   /* ABOUT Section */
   
+  /* Les spans restent inchangés */
   span {
     color: var(--main-color);
   }
@@ -361,11 +370,9 @@
   }
   
   .about-img img {
-    width: 30vw;
+    width: 90%;
     position: relative;
   }
-  
-
   
   .about-yellow {
     display: block;
@@ -386,23 +393,22 @@
     opacity: 1; 
   }
   
-  .heading {
+  .about-title {
     font-size: 4.5rem;
-    text-align: center;
-    font-family: var(--title1);
-  }
-  
-  .about-content h2 {
     text-align: left;
     line-height: 1.2;
+    font-family: var(--title1);
+    margin-bottom: 1rem;
   }
   
-  .about-content h3 {
-    font-size: 3.2rem; 
+  .about-content h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
   }
   
   .about-content p {
-    font-size: 2rem; 
+    font-size: 2rem;
     margin: 2rem 0.3rem;
   }
   
@@ -436,7 +442,7 @@
   .angel {
     background: url(../images/bg-star-lady.png) no-repeat center;
     background-size: contain;
-    height: 300px;
+    height: 600px;
     position: absolute;
     width: 50%;
     z-index: 0;
@@ -460,6 +466,10 @@
   
   .services h2 {
     margin-bottom: 4rem;
+    font-size: 5vh; 
+    display: flex;
+    justify-content: center; 
+    font-family: var(--title1);
   }
   
   .services .services-container {
@@ -540,8 +550,12 @@
   }
   
   .portfolio h2 {
-    margin-bottom: 4rem;
     color: var(--bg-color);
+    font-family: var(--title1);
+    margin-bottom: 4rem;
+    font-size: 5vh; 
+    display: flex;
+    justify-content: center; 
   }
   
   .dark-mode .portfolio h2 {
@@ -596,7 +610,7 @@
   
   .portfolio-layer h4 {
     font-size: 3.7rem;
-    font-family: var(--nav-a);
+    font-family: var(--title1);
   }
   
   .portfolio-layer p {
@@ -618,5 +632,4 @@
     font-size: 2.5rem;
     color: var(--text-color);
   }
-}
 

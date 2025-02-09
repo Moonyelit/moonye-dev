@@ -1,612 +1,9 @@
-/*
---------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------
-BREKPOINT
--------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------------------------
-*/
 
-@media (min-width: 2000px) {
-/* LOADER  */
-
-#loader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-color);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-  overflow: hidden;
-}
-
-#loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.water {
-  width: 100px;
-  height: 100px;
-  background-color: var(--text-color);
-  border-radius: 50%;
-  position: relative;
-  box-shadow: inset 0 0 10px 0 var(--shadow-color), 0 2px 5px 0 var(--shadow-color);
-  overflow: hidden;
-}
-
-.water:before, .water:after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: -50px;
-  background-color: var(--white-color);
-}
-
-.water:before {
-  border-radius: 45%;
-  background: rgba(251, 241, 225, 0.7);
-  animation: wave 5s linear infinite;
-}
-
-.water:after {
-  border-radius: 35%;
-  background: rgba(251, 241, 225, 0.3);
-  animation: wave 5s linear infinite;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-  /* HOME Section */
-  .orbit-1 {
-    top: -30rem;
-    left: -50rem;
-  }
-
-  .orbit {
-    background: url(../../images/bg-orbit.png) no-repeat center;
-    background-size: contain;
-    height: 600px;
-    position: absolute;
-    width: 50%;
-    z-index: 0;
-    mix-blend-mode: darken;
-    animation: rotation2 120s infinite linear;
-    opacity: 0.45;
-  }
-
-  .dark-mode .orbit {
-    background: url(../../images/bg-orbit2.png) no-repeat center;
-  }
-
-  @keyframes rotation2 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  .home {
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    padding: 3rem 0% 23rem;
-  }
-
-  .home .home-content {
-    max-width: 100rem;
-    width: 40%;
-  }
-
-  .home-content h3 {
-    font-size: 8rem;
-    margin-bottom: 0.3rem;
-    font-weight: 700;
-    line-height: 1;
-    font-family: var(--title1);
-  }
-
-  .home-content h1 {
-    font-size: 9rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-    font-family: var(--title1);
-  }
-
-  .home-content p {
-    font-size: 2.8rem;
-    text-align: justify;
-  }
-
-  .home-content span{
-    color: var(--title1);
-    font-weight: bold;
-  }
-
-  .home-content .social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: transparent;
-    border: 0.2rem solid var(--text-color);
-    border-radius: 50%;
-    box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-    font-size: 3rem;
-    color: var(--text-color);
-    margin: 2.5rem 1.5rem 3rem 0;
-    transition: 0.5s ease;
-  }
-
-  .home-content .social-media a:hover {
-    background: var(--hover-color2);
-    color: var(--white-color);
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 1.2rem 2.8rem;
-    background: var(--text-color);
-    border-radius: 0.6rem;
-    box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-    font-size: 2.6rem;
-    color: var(--white-color);
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    border: 0.2rem solid transparent;
-    transition: 0.5s ease;
-    z-index: 3;
-  }
-
-  .btn:hover {
-    background: var(--hover-color2);
-    color: var(--white-color);
-    border-color: var(--hover-color2);
-  }
-
-  .home .profession-container {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .home .profession-container .profession-box {
-    position: absolute;
-    top: 0;
-    right: 10%;
-    width: 768px;
-    height: 140vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: professionRotate 13s ease-out infinite;
-  }
-
-  @keyframes professionRotate {
-    0%,
-    20% {
-      transform: rotate(0deg);
-    }
-    25%,
-    45% {
-      transform: rotate(-90deg);
-    }
-    50%,
-    70% {
-      transform: rotate(-180deg);
-    }
-    75%,
-    95% {
-      transform: rotate(-270deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
-
-  .home .profession-box .profession {
-    position: absolute;
-    left: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: var(--text-color);
-    transform: rotate(calc(360deg / 4 * var(--i)));
-    transform-origin: 384px;
-    background: var(--bg-color);
-    padding: 13px 0;
-    min-width: 200px;
-    text-align: center;
-    z-index: 0;
-  }
-
-  .home .profession-box .profession:nth-child(1) i {
-    margin-right: 15px;
-  }
-
-  .home .profession-box .profession:nth-child(2),
-  .home .profession-box .profession:nth-child(4) {
-    padding-bottom: 20px;
-  }
-
-  .home .profession i {
-    font-size: 3.8rem;
-  }
-
-  .home .profession h3 {
-    font-size: 3.3rem;
-    line-height: 1;
-    font-weight: 600;
-  }
-
-  .home .profession-box .circle {
-    width: 580px;
-    height: 580px;
-    border: 4.5px solid var(--text-color);
-    border-radius: 50%;
-    z-index: -1;
-  }
-
+@media (max-width: 1250px) {
   .home .profession-container .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-top: 50vh solid var(--text-color2);
-    border-right: 55vh solid var(--text-color2);
-    border-bottom: 50vh solid var(--text-color2);
-    border-left: 55vh solid transparent;
+    right: -15%;
   }
 
-  .home-img img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    pointer-events: none;
-    max-width: 880px;
-    max-height: 100vh;
-  }
-
-  .home .btn {
-    margin-right: 1rem;
-    margin-bottom: 1rem;  
-  }
-
-  /* ABOUT Section */
-
-  span {
-    color: var(--main-color);
-  }
-
-  .span2 {
-    color: var(--bg-color);
-  }
-
-  .about {
-    display: flex;
-    background: var(--text-color);
-    background-size: cover;
-    color: var(--white-color);
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    max-height: 110vh;
-    min-height: 100vh;
-    padding: 8rem 7% 2rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .dark-mode .about {
-    background: var(--bg-color);
-  }
-
-  .about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/bg-meteor-shower.webp) 10% top no-repeat;
-    opacity: 0.3;
-    background-size: 150%;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  .about-img {
-    position: relative;
-  }
-
-  .about-img img {
-    width: 60rem;
-    position: relative;
-  }
-
-  /* .dark-mode .about-img img {
-    left: 8.5rem;
-  } */
-
-  .about-yellow {
-    display: block;
-  }
-
-  .about-black {
-    display: none;
-  }
-
-  .dark-mode .about-yellow {
-    display: none;
-  }
-
-  .dark-mode .about-black {
-    display: block;
-  }
-
-  .heading {
-    font-size: 4.5rem;
-    text-align: center;
-    font-family: var(--title1);
-  }
-
-  .about-content h2 {
-    text-align: left;
-    line-height: 1.2;
-    font-size: 8rem;
-  }
-
-  .about-content h3 {
-    font-size: 5rem;
-  }
-
-  .about-content p {
-    font-size: 2.8rem;
-    margin: 2rem 0.3rem;
-  }
-
-  .btn2 {
-    display: inline-block;
-    padding: 2.2rem 3.8rem;
-    background: var(--bg-color);
-    border-radius: 0.6rem;
-    box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-    font-size: 2.9rem;
-    color: var(--white-color);
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    border: 0.2rem solid transparent;
-    transition: 0.5s ease;
-  }
-
-  .btn2:hover {
-    background: var(--hover-color2);
-    color: var(--white-color);
-    border-color: var(--hover-color2);
-  }
-
-  /* SERVICES Section */
-
-  .angel-1 {
-    bottom: -10rem;
-    left: -45rem;
-  }
-
-  .angel {
-    background: url(../../images/bg-star-lady.png) no-repeat center;
-    background-size: contain;
-    height: 600px;
-    position: absolute;
-    width: 50%;
-    z-index: 0;
-    mix-blend-mode: darken;
-    opacity: 0.8;
-  }
-
-  .dark-mode .angel {
-    background: url(../../images/bg-star-lady2.png) no-repeat center;
-  }
-
-  .services {
-    padding-bottom: 10rem;
-    max-height: 100vh;
-    min-height: 80vh;
-    margin-bottom: 10rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .services h2 {
-    margin-bottom: 4rem;
-    font-size: 8rem;
-  }
-
-  .services .services-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5rem;
-  }
-
-  .services-container .services-box {
-    flex: 1 1 10rem;
-    background-color: var(--main-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
-    text-align: center;
-    border-top: 0.6rem solid var(--text-color);
-    border-bottom: 0.6rem solid var(--text-color);
-    transition: 0.5s ease;
-  }
-
-  .services-container .services-box:hover {
-    box-shadow: 0 0.1rem 2rem var(--shadow-color);
-    transform: scale(1.02);
-  }
-
-  .services-box i {
-    font-size: 6rem;
-    color: var(--text-color);
-  }
-
-  .services-box h3 {
-    font-size: 4.3rem;
-    transition: 0.5s ease;
-  }
-
-  .services-box:hover h3 {
-    color: var(--hover-color2);
-  }
-
-  .services-box p {
-    font-size: 2.4rem;
-    margin: 1rem 0 3rem;
-  }
-
-  /* PORTFOLIO Section */
-
-  .portfolio {
-    padding-bottom: 10rem;
-    position: relative;
-    background: var(--text-color);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-
-  .dark-mode .portfolio {
-    background: var(--bg-color);
-  }
-
-  .portfolio::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../../images/bg-star-chart-alt.webp) 10% top no-repeat;
-    opacity: 0.1;
-    background-size: 150%;
-    pointer-events: none;
-  }
-
-  .portfolio h2 {
-    font-size: 8rem;
-    margin-bottom: 4rem;
-    color: var(--bg-color);
-  }
-
-  .dark-mode .portfolio h2 {
-    color: var(--text-color);
-  }
-
-  .portfolio .portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-  }
-
-  .portfolio-container .portfolio-box {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-  }
-
-  .portfolio-box img {
-    width: 100%;
-    transition: 0.5s ease;
-  }
-
-  .portfolio-box:hover img {
-    transform: scale(1.1);
-  }
-
-  .portfolio-box .portfolio-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), var(--text-color));
-    color: var(--white-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    opacity: 0;
-    transition: 0.5s ease;
-  }
-
-  .portfolio-box:hover .portfolio-layer {
-    opacity: 1;
-  }
-
-  .portfolio-layer h4 {
-    font-size: 3.7rem;
-    font-family: var(--nav-a);
-  }
-
-  .portfolio-layer p {
-    font-size: 2rem;
-    margin: 0.3rem 0 1rem;
-  }
-
-  .portfolio-layer a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: var(--white-color);
-    border-radius: 50%;
-  }
-
-  .portfolio-layer a i {
-    font-size: 2.5rem;
-    color: var(--text-color);
-  }
-}
-
-
-@media (max-width: 1100px) {
   .home .profession-container .profession-box {
     right: -15%;
   }
@@ -614,6 +11,10 @@ BREKPOINT
   .home-img img {
     max-width: 420px;
   }
+
+  .home-boutons a {
+    font-size: 2rem;
+      }
 }
 
 @media (max-width: 1024px) {
@@ -629,8 +30,16 @@ BREKPOINT
     right: -20%;
   }
 
+  .home p {
+    font-size: 1.25rem;
+  }
+
   .home .profession-container .overlay {
-    right: -12%;
+    position: absolute;
+  }
+
+  .home-boutons a {
+font-size: 1.5rem;
   }
 
   .home-img img {
@@ -710,9 +119,6 @@ BREKPOINT
     margin-bottom: 1.5rem;
   }
 
-  .home-content h1 {
-    line-height: 3rem;
-  }
 }
 
 @media (max-width: 879px) {
@@ -763,7 +169,7 @@ BREKPOINT
   }
 
   .home-content p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
   }
@@ -780,7 +186,7 @@ BREKPOINT
 
   .home .profession-container .profession-box {
     position: fixed;
-    top: 450px;
+    top: 50em;
     left: 0;
     width: 100%;
   }
@@ -994,7 +400,7 @@ BREKPOINT
   }
 
   .home .profession-container .overlay {
-    top: 80rem;
+      top: 95%;
   }
 
   .home .btn {
@@ -1089,15 +495,22 @@ BREKPOINT
     margin: 0.6rem 1.5rem 0.6rem 0;
   }
 
+  .home .profession-container .overlay {
+    position: absolute;
+    top: 85%;
+    z-index: 1;
+}
+
   .about-img img {
     width: 90vw;
   }
 }
 
-@media (max-width: 315px) {
+@media (max-width: 320px) {
   .home-content h1 {
     font-size: 4.5rem;
   }
+
 
   .portfolio-layer h4 {
     font-size: 1.6rem;

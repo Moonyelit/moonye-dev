@@ -2,356 +2,339 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FOUGEROUSE Élodie | Web Developer in France</title>
-    <meta name="description" content="FOUGEROUSE Élodie — Web Developer Junior in France | Portfolio.">
-    <meta name="keywords"
-        content="Web Developer, France, Élodie Fougerouse, Développeur Web, Portfolio, HTML, CSS, JavaScript, Front-end, UI/UX">
-    <meta property="og:title" content="FOUGEROUSE Élodie | Web Developer in France | Portfolio">
-    <meta property="og:description" content="FOUGEROUSE Élodie — Web Developer Junior in France.">
+  <title>FOUGEROUSE Élodie | Web Developer in France</title>
+  <meta name="description" content="FOUGEROUSE Élodie — Web Developer Junior in France | Portfolio.">
+  <meta name="keywords" content="Web Developer, France, Élodie Fougerouse, Développeur Web, Portfolio, HTML, CSS, JavaScript, Front-end, UI/UX">
+  <meta name="robots" content="index, follow">
 
-    <meta name="author" content="FOUGEROUSE Élodie">
-    <meta name="designer" content="FOUGEROUSE Élodie">
+  <!-- URL canonique -->
+  <link rel="canonical" href="https://moonye-dev.github.io/moonye-dev/index.html">
 
-    <link rel="preload" href="https://use.typekit.net/ean4ozv.css" as="style">
-    <link rel="stylesheet" href="https://use.typekit.net/ean4ozv.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="FOUGEROUSE Élodie | Web Developer in France | Portfolio">
+  <meta property="og:description" content="FOUGEROUSE Élodie — Web Developer Junior in France.">
 
-    <!-- CUSTOM CSS et JAVASCRIPT-->
-    <link href="css/style.css?v=1" rel="stylesheet" type="text/css">
-    <link href="css/index.css?v=1" rel="stylesheet" type="text/css">
-    <link href="css/responsive/index-responsive.css?v=1" rel="stylesheet" type="text/css">
-    <link href="css/background/background.css" rel="stylesheet" type="text/css">
-    <link href="css/skills-scss/skills.css" rel="stylesheet" type="text/css">
+  <meta name="author" content="FOUGEROUSE Élodie">
+  <meta name="designer" content="FOUGEROUSE Élodie">
 
-    <script defer src="js/script.js"></script>
-    <script defer src="js/index.js"></script>
+  <link rel="preload" href="https://use.typekit.net/ean4ozv.css" as="style">
+  <link rel="stylesheet" href="https://use.typekit.net/ean4ozv.css">
 
+  <!-- CUSTOM CSS et JAVASCRIPT -->
+  <link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+  <link href="css/index.css?v=1" rel="stylesheet" type="text/css">
+  <link href="css/responsive/index-responsive.css?v=1" rel="stylesheet" type="text/css">
+  <link href="css/background/background.css" rel="stylesheet" type="text/css">
+  <link href="css/skills-scss/skills.css" rel="stylesheet" type="text/css">
 
-    <!-- BOX ICONS  -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script defer src="js/script.js"></script>
+  <script defer src="js/index.js"></script>
 
+  <!-- BOX ICONS  -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="./images/Logo - 32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/Logo - 16x16.png.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="./images/Logo - 32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/Logo - 16x16.png" sizes="16x16">
 
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBDDWWE856"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CBDDWWE856');
+  </script>
 
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBDDWWE856"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- SCROLL REVEAL -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-        gtag('config', 'G-CBDDWWE856');
-    </script>
+  <!-- Google reCAPTCHA -->
+  <script async defer src="https://www.google.com/recaptcha/api.js"></script>
 
-    <!-- SCROLL REVEAL -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
+  <!-- Données structurées pour le SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Élodie Fougerouse",
+      "jobTitle": "Web Developer Junior",
+      "url": "https://moonye-dev.github.io/moonye-dev/index.html",
+      "sameAs": [
+        "https://www.linkedin.com/in/elodie-fougerouse-034772210/"
+      ]
+    }
+  </script>
 </head>
 
-
-
-<!-- BODY -->
-
 <body>
-    <!-- LOADER -->
-    <div id="loader">
-        <div class="water"></div>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="water"></div>
+  </div>
+
+  <!-- HEADER DESIGN -->
+  <header class="header">
+    <a href="#" class="logo">Moonye.</a>
+
+    <nav class="navbar" role="navigation">
+      <a href="#home" class="active">HOME</a>
+      <a href="#about">À PROPOS</a>
+      <a href="#services">SERVICES</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <div class="icons">
+      <div class="bx bx-moon" id="darkMode-icon" aria-label="Activer/désactiver le mode sombre"></div>
+      <div class="bx bx-menu" id="menu-icon" aria-label="Ouvrir le menu"></div>
     </div>
+  </header>
 
-    <!-- HEADER DESIGN -->
-    <header class="header">
-        <a href="#" class="logo">Moonye.</a>
+  <!-- HERO SECTION DESIGN -->
+  <main class="sky">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    <div class="comet"></div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">HOME</a>
-            <a href="#about">À PROPOS</a>
-            <a href="#services">SERVICES</a>
-            <a href="#portfolio">PORTFOLIO</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
+    <section class="home" id="home">
+      <div class="orbit orbit-1"></div>
+      <div class="home-content">
 
-        <div class="icons">
-            <div class="bx bx-moon" id="darkMode-icon"></div>
-            <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="section-title">
+        <span class="intro-text">Hello, I am</span>
+        <h1>Élodie Fougerouse</h1>
+      </div>
+        <p>
+          Je suis en pleine reconversion dans le développement web, un domaine qui m’inspire profondément.
+          Actuellement en formation au Garage 404, <span>je recherche un stage non rémunéré d’une durée de 2 mois du 24 avril 2025 au 7 juillet 2025.</span>
+          Chaque jour, j’apprends à transformer des idées en projets concrets et captivants, et je suis plus motivée que jamais à avancer dans cette aventure.
+        </p>
+      
+
+        <div class="social-media">
+          <!-- Liens avec aria-label -->
+          <!-- <a href="#" aria-label="Facebook"><i class="bx bxl-facebook"></i></a> -->
+          <!-- <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a> -->
+          <a href="#" aria-label="Instagram"><i class="bx bxl-instagram-alt"></i></a>
+          <a href="https://www.linkedin.com/in/elodie-fougerouse-034772210/" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
         </div>
 
-    </header>
+        <div class="home-boutons">
+          <a href="./Documents/CV - FOUGEROUSE Elodie.pdf" class="btn" target="_blank" rel="noopener noreferrer">
+            Voir mon CV
+          </a>
+          <a href="#portfolio" class="btn">Mes projets</a>
+        </div>
+      </div>
 
-    <!-- HERO SECTION DESIGN -->
-    <main class="sky">
-        <div class="stars"></div>
-        <div class="stars2"></div>
-        <div class="stars3"></div>
-        <div class="comet"></div>
+      <div class="profession-container">
+        <div class="profession-box">
+          <div class="profession" style="--i:0;">
+            <i class="bx bx-code-alt"></i>
+            <h3>Web Developer Junior</h3>
+          </div>
+          <div class="profession" style="--i:1;">
+            <i class="bx bx-palette"></i>
+            <h3>Web Designer Junior</h3>
+          </div>
+          <div class="profession" style="--i:2;">
+            <i class="bx bx-pencil"></i>
+            <h3>Illustrator</h3>
+          </div>
+          <div class="profession" style="--i:3;">
+            <i class="bx bxs-cloud"></i>
+            <h3>Dreamer</h3>
+          </div>
+          <div class="circle"></div>
+        </div>
+        <div class="overlay"></div>
+      </div>
 
-        <section class="home" id="home">
-            <div class="orbit orbit-1"></div>
-            <div class="home-content">
+      <div class="home-img">
+        <img src="./images/home.png" alt="Photo de profil de Élodie Fougerouse">
+      </div>
+    </section>
 
+    <!-- ABOUT SECTION DESIGN -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img class="about-yellow" src="./images/about2.png" alt="Ma photo de profil dans un triangle jaune">
+        <img class="about-black" src="./images/about3.png" alt="Ma photo de profil dans un triangle noir">
+      </div>
 
-                <h3>Hello, I am</h3>
-                <h1>Élodie Fougerouse</h1>
-                <p>Je suis en pleine reconversion dans le développement web, un domaine qui m’inspire profondément.
-                    Actuellement en formation au Garage 404, <span> je recherche un stage non rémunérée d’une durée de 2
-                        mois du 24 avril 2025 au 7 juillet 2025.</span>
-                    Chaque jour, j’apprends à transformer des idées en projets concrets et captivants, et je suis plus
-                    motivée que jamais à avancer dans cette aventure.
-                </p>
+      <div class="about-content">
+        <!-- Le titre "À propos de" n'est plus dans un h2 mais dans un bloc décoratif -->
+        <div class="about-title">
+          <span>À propos de</span> <span class="span2">Moi</span>
+        </div>
+        <!-- Le rôle est désormais mis en avant en h1 -->
+        <h1>Je suis web developpeuse junior !</h1>
+        <p>
+          J’ai toujours été à l’aise avec l’informatique, c’est comme un langage naturel pour moi. Avec le temps, j’ai réalisé que créer sur le web était ce qui me passionnait le plus. Aujourd’hui, je me forme pour devenir développeuse spécialisée en front-end et donner vie à des designs qui parlent aux utilisateurs.
+        </p>
 
+        <a href="./FRONT-END/about-me.html" class="btn2">En savoir plus</a>
+      </div>
+    </section>
 
-                <div class="social-media">
-                    <!-- <a href="#"><i class='bx bxl-facebook'></i></a> -->
-                    <!-- <a href="#"><i class='bx bxl-twitter'></i></a> -->
-                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                    <a href="https://www.linkedin.com/in/elodie-fougerouse-034772210/"><i
-                            class='bx bxl-linkedin'></i></a>
-                </div>
+    <!-- SERVICES SECTION DESIGN -->
+    <section class="services" id="services">
+      <div class="angel angel-1"></div>
 
-                <div class="home-boutons">
-                    <a href="./Documents/CV - FOUGEROUSE Elodie .pdf" class="btn" target="_blank">
-                        Voir mon CV
-                    </a>
-                    <a href="#portfolio" class="btn"> Mes projets </a>
-                </div>
+      <h2 class="heading">Mes<span> Services</span></h2>
 
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
+          <p>
+            J’aime donner vie à des sites qui ne sont pas seulement beaux, mais qui racontent une histoire et offrent une vraie expérience utilisateur.
+          </p>
+          <!-- <a href="#" class="btn">En savoir plus</a> -->
+        </div>
+        <div class="services-box">
+          <i class="bx bxs-paint"></i>
+          <h3>Graphic Design</h3>
+          <p>
+            Créer des visuels, c’est bien plus qu’un simple dessin : c’est transmettre une idée, une identité. J’adore jouer avec les couleurs et les formes pour donner un vrai caractère aux projets.
+          </p>
+          <!-- <a href="#" class="btn">En savoir plus</a> -->
+        </div>
+        <div class="services-box">
+          <i class="bx bx-layout"></i>
+          <h3>UI/UX Design</h3>
+          <p>
+            L’interface d’un site, c’est comme une première impression. J’aime concevoir des designs simples et intuitifs qui accueillent les utilisateurs comme s’ils étaient chez eux.
+          </p>
+          <!-- <a href="#" class="btn">En savoir plus</a> -->
+        </div>
+      </div>
+    </section>
 
-            </div>
+    <!-- PORTFOLIO SECTION DESIGN -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Derniers <span>Projets</span></h2>
 
-            <div class="profession-container">
-                <div class="profession-box">
-                    <div class="profession" style="--i:0;">
-                        <i class='bx bx-code-alt'></i>
-                        <h3>Web Developer Junior</h3>
-                    </div>
-                    <div class="profession" style="--i:1;">
-                        <i class='bx bx-palette'></i>
-                        <h3>Web Designer Junior</h3>
-                    </div>
-                    <div class="profession" style="--i:2;">
-                        <i class='bx bx-pencil'></i>
-                        <h3> Illustrator </h3>
-                    </div>
-                    <div class="profession" style="--i:3;">
-                        <i class='bx bxs-cloud'></i>
-                        <h3> Dreamer</h3>
-                    </div>
-
-                    <div class="circle"></div>
-                </div>
-
-                <div class="overlay"></div>
-            </div>
-
-            <!-- modifier image par rapport placement photoshop -->
-            <div class="home-img">
-                <img src="./images/home.png" alt="Photo de profil de Élodie Fougerouse">
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION DESIGN -->
-        <section class="about" id="about">
-
-            <div class="about-img">
-                <img class="about-yellow" src="./images/about2.png" alt="ma photo de profil 2 dans un triangle">
-                <img class="about-black" src="./images/about3.png" alt="ma photo de profil 2 dans un triangle">
-            </div>
-
-            <div class="about-content">
-                <h2 class="heading">À propos de <span class="span2">Moi</span></h2>
-                <h3>Je suis web developpeuse junior ! </h3>
-                <p>J’ai toujours été à l’aise avec l’informatique, c’est comme un langage naturel pour moi. Avec le
-                    temps, j’ai réalisé que créer sur le web était ce qui me passionnait le plus. Aujourd’hui, je me
-                    forme pour devenir développeuse spécialisée en front-end et donner vie à des designs qui parlent aux
-                    utilisateurs.
-                </p>
-
-
-                <a href="./FRONT-END/about-me.html" class="btn2">En savoir plus</a>
-            </div>
-        </section>
-
-        <!-- SERVICES SECTION DESIGN -->
-        <section class="services" id="services">
-
-            <div class="angel angel-1"></div>
-
-
-            <h2 class="heading">Mes<span> Services</span></h2>
-
-            <div class="services-container">
-                <div class="services-box">
-                    <i class='bx bx-code-alt'></i>
-                    <h3>Web Development</h3>
-                    <p>J’aime donner vie à des sites qui ne sont pas seulement beaux, mais qui racontent une histoire et
-                        offrent une vraie expérience utilisateur.</p>
-
-
-                    <!-- <a href="#" class="btn">En savoir plus</a> -->
-                </div>
-                <div class="services-box">
-                    <i class='bx bxs-paint'></i>
-                    <h3>Graphic Design</h3>
-                    <p>Créer des visuels, c’est bien plus qu’un simple dessin : c’est transmettre une idée, une
-                        identité. J’adore jouer avec les couleurs et les formes pour donner un vrai caractère aux
-                        projets.</p>
-
-
-                    <!-- <a href="#" class="btn">En savoir plus</a> -->
-                </div>
-                <div class="services-box">
-                    <i class='bx bx-layout'></i>
-                    <h3>UI/UX Design</h3>
-                    <p>L’interface d’un site, c’est comme une première impression. J’aime concevoir des designs simples
-                        et intuitifs qui accueillent les utilisateurs comme s’ils étaient chez eux.</p>
-
-
-                    <!-- <a href="#" class="btn">En savoir plus</a> -->
-                </div>
-            </div>
-        </section>
-
-
-        <!-- PORTFOLIO SECTION DESIGN -->
-
-        <section class="portfolio" id="portfolio">
-
-            <h2 class="heading">Derniers <span>Projets</span></h2>
-
-            <div class="portfolio-container">
-
-                <div class="portfolio-box">
-                    <img src="images/GIF/PONG.gif" alt="GIF du jeu PONG">
-                    <div class="portfolio-layer">
-                        <h4>PONG</h4>
-                        <p>Ce projet est une implémentation simple du jeu Pong pour m'aider à mieux apprendre la
-                            programmation en JavaScript.</p>
-                        <a href="https://github.com/Moonyelit/PONG"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img src="images/GIF/PlaceAleatoire.gif" alt="GIF du site de place aléatoire">
-                    <div class="portfolio-layer">
-                        <h4>Site Place Aléatoire </h4>
-                        <p>Site permettant de créer sa salle de classe et ajouter les noms des élèves pour pouvoir les
-                            placer aléatoirement</p>
-                        <a href="https://github.com/Moonyelit/G404-PlaceAleatoire"><i
-                                class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img src="images/portfolio3.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Prochainement</h4>
-                        <p>Je travaille actuellement sur mes projets et je suis impatiente de les partager avec vous
-                            prochainement. Restez connectés pour découvrir mon univers créatif !</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img src="images/portfolio4.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Prochainement</h4>
-                        <p>Je travaille actuellement sur mes projets et je suis impatiente de les partager avec vous
-                            prochainement. Restez connectés pour découvrir mon univers créatif !</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img src="images/portfolio5.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Prochainement</h4>
-                        <p>Je travaille actuellement sur mes projets et je suis impatiente de les partager avec vous
-                            prochainement. Restez connectés pour découvrir mon univers créatif !</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-
-                <div class="portfolio-box">
-                    <img src="images/portfolio6.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Prochainement</h4>
-                        <p>Je travaille actuellement sur mes projets et je suis impatiente de les partager avec vous
-                            prochainement. Restez connectés pour découvrir mon univers créatif !</p>
-                        <a href="#"><i class='bx bx-link-external'></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION DESIGN -->
-
-        <section class="contact" id="contact">
-
-            <div class="orbit2 orbit-2"></div>
-            <div class="balance balance-1"></div>
-
-            <h2 class="heading">Contactez <span>Moi !</span></h2>
-
-            <form id="contactForm" action="https://formspree.io/f/xzzzlvpr" method="POST">
-                <!-- Redirection après soumission -->
-                <input type="hidden" name="_redirect" value="https://moonyelit.github.io/moonye-dev/index.html#home">
-                <input type="hidden" name="_next" value="https://moonyelit.github.io/moonye-dev/index.html#home">
-
-                <!-- Honeypot pour éviter les robots -->
-                <input type="text" name="_gotcha" style="display:none" autocomplete="off">
-
-                <div class="input-box">
-                    <input name="name" type="text" placeholder="Votre nom" required pattern="[A-Za-zÀ-ÿ\s\-]{2,50}"
-                        title="Seuls les caractères alphabétiques sont autorisés">
-                    <input name="email" type="email" placeholder="Adresse mail" required>
-                </div>
-
-                <div class="input-box">
-                    <input name="phone" type="tel" placeholder="Numéro de téléphone (facultatif)"
-                        pattern="^\+?\d{0,15}$" title="Numéro de téléphone valide uniquement">
-                    <input name="emailConfirm" type="email" placeholder="Confirmez votre email" required>
-                </div>
-
-                <textarea name="message" cols="30" rows="10" placeholder="Votre Message" required minlength="10"
-                    maxlength="500"></textarea>
-
-                <div class="recaptcha-container">
-                    <div class="g-recaptcha" data-sitekey="6Ldps8QqAAAAACU9Keo7BRY24Qjy_Pr67eMSSvD4"></div>
-                    <script src="https://www.google.com/recaptcha/api.js" defer></script>
-                </div>
-
-                <input type="submit" value="Envoyer" class="btn">
-            </form>
-
-
-            <!-- <div id="alertSuccess" class="alert-success">Votre message a été envoyé avec succès !</div> -->
-
-        </section>
-
-
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by Moonye | All Rights Reserverd </p>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="images/GIF/PONG.gif" alt="GIF du jeu PONG">
+          <div class="portfolio-layer">
+            <h4>PONG</h4>
+            <p>
+              Ce projet est une implémentation simple du jeu Pong pour m'aider à mieux apprendre la programmation en JavaScript.
+            </p>
+            <a href="https://github.com/Moonyelit/PONG"><i class="bx bx-link-external"></i></a>
+          </div>
         </div>
 
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        <div class="portfolio-box">
+          <img src="images/GIF/PlaceAleatoire.gif" alt="GIF du site de place aléatoire">
+          <div class="portfolio-layer">
+            <h4>Site Place Aléatoire</h4>
+            <p>
+              Site permettant de créer sa salle de classe et ajouter les noms des élèves pour pouvoir les placer aléatoirement.
+            </p>
+            <a href="https://github.com/Moonyelit/G404-PlaceAleatoire"><i class="bx bx-link-external"></i></a>
+          </div>
         </div>
-    </footer>
 
+        <div class="portfolio-box">
+          <img src="images/portfolio3.jpg" alt="Projet en cours de développement">
+          <div class="portfolio-layer">
+            <h4>Prochainement</h4>
+            <p>
+              Je travaille actuellement sur mes projets et je suis impatiente de les partager avec vous prochainement. Restez connectés pour découvrir mon univers créatif !
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
 
+        <div class="portfolio-box">
+          <img src="images/portfolio4.jpg" alt="Projet en cours de développement">
+          <div class="portfolio-layer">
+            <h4>Prochainement</h4>
+            <p>
+              Je travaille actuellement sur mes projets et je suis impatiente de les partager avec vous prochainement. Restez connectés pour découvrir mon univers créatif !
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="images/portfolio5.jpg" alt="Projet en cours de développement">
+          <div class="portfolio-layer">
+            <h4>Prochainement</h4>
+            <p>
+              Je travaille actuellement sur mes projets et je suis impatiente de les partager avec vous prochainement. Restez connectés pour découvrir mon univers créatif !
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="images/portfolio6.jpg" alt="Projet en cours de développement">
+          <div class="portfolio-layer">
+            <h4>Prochainement</h4>
+            <p>
+              Je travaille actuellement sur mes projets et je suis impatiente de les partager avec vous prochainement. Restez connectés pour découvrir mon univers créatif !
+            </p>
+            <a href="#"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION DESIGN -->
+    <section class="contact" id="contact">
+      <div class="orbit2 orbit-2"></div>
+      <div class="balance balance-1"></div>
+
+      <h2 class="heading">Contactez <span>Moi !</span></h2>
+
+      <form id="contactForm" action="https://formspree.io/f/xzzzlvpr" method="POST">
+        <!-- Redirection après soumission -->
+        <input type="hidden" name="_redirect" value="https://moonye-dev.github.io/moonye-dev/index.html#home">
+        <input type="hidden" name="_next" value="https://moonye-dev.github.io/moonye-dev/index.html#home">
+
+        <!-- Honeypot pour éviter les robots -->
+        <input type="text" name="_gotcha" style="display:none" autocomplete="off">
+
+        <div class="input-box">
+          <input name="name" type="text" placeholder="Votre nom" required pattern="[A-Za-zÀ-ÿ\s\-]{2,50}" title="Seuls les caractères alphabétiques sont autorisés">
+          <input name="email" type="email" placeholder="Adresse mail" required>
+        </div>
+
+        <div class="input-box">
+          <input name="phone" type="tel" placeholder="Numéro de téléphone (facultatif)" pattern="^\+?\d{0,15}$" title="Numéro de téléphone valide uniquement">
+          <input name="emailConfirm" type="email" placeholder="Confirmez votre email" required>
+        </div>
+
+        <textarea name="message" cols="30" rows="10" placeholder="Votre Message" required minlength="10" maxlength="500"></textarea>
+
+        <div class="recaptcha-container">
+          <div class="g-recaptcha" data-sitekey="6Ldps8QqAAAAACU9Keo7BRY24Qjy_Pr67eMSSvD4"></div>
+        </div>
+
+        <input type="submit" value="Envoyer" class="btn">
+      </form>
+      <!-- <div id="alertSuccess" class="alert-success">Votre message a été envoyé avec succès !</div> -->
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2024 by Moonye | All Rights Reserved</p>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#home" aria-label="Retour en haut"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
 </body>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
 
 </html>

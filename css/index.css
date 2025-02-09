@@ -347,6 +347,19 @@
     position: relative;
     z-index: 1;
   }
+
+  .about-title{
+    font-size: 5vh; 
+    text-align: left;
+    line-height: 1.2;
+    font-family: var(--title1);
+  }
+
+  .Dev-web{
+    font-size: 3vh;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
   
   .dark-mode .about {
     background: var(--bg-color);

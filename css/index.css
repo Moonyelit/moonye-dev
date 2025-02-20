@@ -163,7 +163,7 @@
   }
   
   .home-content p {
-    font-size: 2vh; 
+    font-size: 2.2vh; 
     text-align: justify;
   }
 
@@ -627,8 +627,8 @@
   }
   
   .portfolio-layer p {
-    font-size: 2rem;
-    margin: 0.3rem 0 1rem;
+    font-size: 1.5rem;
+    margin: 0.3rem 0 0.5rem;
   }
   
   .portfolio-layer a {
@@ -646,3 +646,10 @@
     color: var(--text-color);
   }
 
+  .portfolio-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1em;
+  }

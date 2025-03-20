@@ -1,4 +1,4 @@
-# Portfolio de Élodie Fougerouse
+# Portfolio d'Élodie Fougerouse
 
 Bienvenue sur mon portfolio ! Je suis Élodie Fougerouse, une développeuse web junior en formation depuis mi-octobre. Actuellement, je suis à la recherche d'un stage non rémunéré d'une durée de 2 mois, du 24 avril 2025 au 7 juillet 2025.
 
